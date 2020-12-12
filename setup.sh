@@ -4,10 +4,13 @@
 DIR="/home/colton/work/dotfiles"
 OLDCONFIGDIR="/home/colton/olddotfiles"
 FILES="bashrc gitconfig vim vimrc zshrc"
+ZSHTHEMES="ckammes"
 
 # update
+echo "------------------"
+echo "Updating system..."
 sudo apt-get update
-sudo apt-get -y upgrade
+sudo apt-get upgrade qq
 
 # install zsh and omz if needed (borrowed code)
 ZSH=/usr/bin/zsh
@@ -39,27 +42,27 @@ else
     fi
 fi
 
-# link oh-my-zsh theme to correct folder
-ln -s ckammes.zsh-theme $HOME/.oh-my-zsh/themes/
-
 # install programs
 # sublime text
+echo "-----------------------"
+echo "Install sublime text..."
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get -y install apt-transport-https
+sudo apt-get install -y apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get -y update
-sudo apt-get -y install sublime-text
+sudo apt-get update qq
+sudo apt-get install -y sublime-text
 
 # fuzzy finder
-sudo apt-get -y install fzf
+echo "-----------------------"
+echo "Install fuzzy finder..."
+sudo apt-get install -y fzf
 
 # create symbolic links for $files
-echo -n "Changing to the home directory $HOME\n"
+echo "-----------------------------------"
+echo "Crete sym links for $FILES in $HOME"
 cd $HOME
 
 for file in $FILES; do
-    echo "processing $file"
-
     # check if there is already a file there
     if test -f ".$file"; then
         # if so, move it to a oldconfig directory
@@ -67,7 +70,7 @@ for file in $FILES; do
             mkdir $OLDCONFIGDIR
         fi
         mv .$file $OLDCONFIGDIR/.$file
-    elif test -d "$file"; then # catches case where 'file' is a directory - ex custom vim colors
+    elif test -d ".$file"; then # catches case where 'file' is a directory - ex custom vim colors
         if [ ! -d "$OLDCONFIGDIR" ]; then
             mkdir $OLDCONFIGDIR
         fi
@@ -77,3 +80,16 @@ for file in $FILES; do
     ln -s $DIR/$file ~/.$file
 done
 
+# link oh-my-zsh theme to correct folder
+echo "----------------------------------"
+echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
+for zshTheme in $ZSHTHEMES; do
+    if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
+        # if it is a link to something, remove the link
+        rm $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+    elif test -f $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
+        # if it is a file, move it to old directory
+        mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
+    fi
+    ln -s $zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+done
