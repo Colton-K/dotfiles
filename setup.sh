@@ -7,7 +7,7 @@ FILES="bashrc gitconfig vim vimrc zshrc"
 
 # update
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y upgrade
 
 # install zsh and omz if needed (borrowed code)
 ZSH=/usr/bin/zsh
@@ -20,13 +20,13 @@ else
     WGET=/usr/bin/wget
     if ! test -f "$WGET"; then
         echo "Install wget because wget doesn't exist in $WGET"
-        sudo apt-get install wget
+        sudo apt-get -y install wget
         unset WGET
     fi
     GIT=/usr/bin/git
     if ! test -f "$GIT"; then
         echo "Install git because git doesn't exist in $GIT"
-        sudo apt-get install git
+        sudo apt-get -y install git
         unset GIT
     fi
     OH_MY_ZSH=/root/.oh-my-zsh/oh-my-zsh.sh
@@ -34,20 +34,24 @@ else
         echo "Already exists oh-my-zsh in $OH_MY_ZSH"
         exit
     else
+        echo "Press Ctrl-D once zsh opens"
         sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
     fi
 fi
 
+# link oh-my-zsh theme to correct folder
+mv ckammes.zsh-theme $HOME/.oh-my-zsh/themes/
+
 # install programs
 # sublime text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
+sudo apt-get -y install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
+sudo apt-get -y update
+sudo apt-get -y install sublime-text
 
 # fuzzy finder
-sudo apt-get install fzf
+sudo apt-get -y install fzf
 
 # create symbolic links for $files
 echo -n "Changing to the home directory $HOME\n"
