@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # set vars
-DIR="/home/colton/work/dotfiles"
+#DIR="/home/colton/work/dotfiles"
+DIR=$(echo $PWD)
 OLDCONFIGDIR="/home/colton/olddotfiles"
 FILES="bashrc gitconfig vim vimrc zshrc"
 ZSHTHEMES="ckammes"
@@ -83,6 +84,8 @@ done
 # link oh-my-zsh theme to correct folder
 echo "----------------------------------"
 echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
+# cd $DIR
+
 for zshTheme in $ZSHTHEMES; do
     if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
         # if it is a link to something, remove the link
@@ -91,5 +94,5 @@ for zshTheme in $ZSHTHEMES; do
         # if it is a file, move it to old directory
         mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
     fi
-    ln -s $zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+    ln -s $DIR/$zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
 done
