@@ -97,4 +97,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias gpu="system76-power"
+alias gpu="sudo system76-power graphics"
+alias profile="system76-power profile"
