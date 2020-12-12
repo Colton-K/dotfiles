@@ -20,10 +20,14 @@ augroup END
 
 set number relativenumber
 
+" hotkey for switching mouse mode
+map <F8> :set mouse=a
+map <F7> :set mouse=""
+
 " make hotkeys
 au BufNewFile,BufRead *.c
     \ map <F9> :make clean && make
 
 " run hotkeys
 au BufNewFile,BufRead *.py
-    \ map <F9> :!clear; python %
+    \ map <F9> :w <bar> :!clear; python3 %
