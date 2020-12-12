@@ -40,7 +40,7 @@ else
 fi
 
 # link oh-my-zsh theme to correct folder
-mv ckammes.zsh-theme $HOME/.oh-my-zsh/themes/
+ln -s ckammes.zsh-theme $HOME/.oh-my-zsh/themes/
 
 # install programs
 # sublime text
