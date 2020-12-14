@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # set vars
-#DIR="/home/colton/work/dotfiles"
 DIR=$(echo $PWD)
-OLDCONFIGDIR="/home/colton/olddotfiles"
+OLDCONFIGDIR="$HOME/olddotfiles"
 FILES="bashrc gitconfig vim vimrc zshrc"
 ZSHTHEMES="ckammes"
 
@@ -14,25 +13,25 @@ sudo apt-get update
 sudo apt-get upgrade qq
 
 # install zsh and omz if needed (borrowed code)
-ZSH=/usr/bin/zsh
-if test -f "$ZSH"; then
+which zsh 2> /dev/null
+if test $? -eq 0; then
     echo "Already installed ZSH"
 else
     sudo apt-get install zsh
     chsh -s /usr/bin/zsh
-    unset ZSH
-    WGET=/usr/bin/wget
-    if ! test -f "$WGET"; then
+    
+    which wget 2> /dev/null
+    if ! test $? -eq 0; then
         echo "Install wget because wget doesn't exist in $WGET"
         sudo apt-get -y install wget
-        unset WGET
     fi
-    GIT=/usr/bin/git
-    if ! test -f "$GIT"; then
+
+    which git 2> /dev/null
+    if ! test $? -eq 0; then
         echo "Install git because git doesn't exist in $GIT"
         sudo apt-get -y install git
-        unset GIT
     fi
+
     OH_MY_ZSH=/root/.oh-my-zsh/oh-my-zsh.sh
     if test -f "$OH_MY_ZSH"; then
         echo "Already exists oh-my-zsh in $OH_MY_ZSH"
@@ -84,7 +83,6 @@ done
 # link oh-my-zsh theme to correct folder
 echo "----------------------------------"
 echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
-# cd $DIR
 
 for zshTheme in $ZSHTHEMES; do
     if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
