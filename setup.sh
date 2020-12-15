@@ -3,7 +3,7 @@
 # set vars
 DIR=$(echo $PWD)
 OLDCONFIGDIR="$HOME/olddotfiles"
-FILES="bashrc gitconfig vim vimrc zshrc"
+FILES="bashrc gitconfig vim vimrc zshrc Xresources"
 ZSHTHEMES="ckammes"
 
 # update

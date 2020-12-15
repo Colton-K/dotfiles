@@ -8,8 +8,8 @@ set mouse=a
 set autoindent
 
 syntax on
-"colorscheme monokai
-colorscheme slate
+colorscheme monokai
+"colorscheme slate
 
 " relative numbering
 augroup numbertoggle
@@ -27,6 +27,9 @@ map <F7> :set mouse=""
 " make hotkeys
 au BufNewFile,BufRead *.c
     \ map <F9> :make clean && make
+
+au BufNewFile,BufRead *.cpp
+    \ map <F9> :make clean && make 
 
 " run hotkeys
 au BufNewFile,BufRead *.py

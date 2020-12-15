@@ -1,0 +1,5 @@
+XTerm*Background: black
+XTerm*Foreground: white
+xterm*faceName: Monospace
+xterm*faceSize: 10
+xterm*selectToClipboard: true

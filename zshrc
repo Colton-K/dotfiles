@@ -99,3 +99,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gpu="sudo system76-power graphics"
 alias profile="system76-power profile"
+# alias xterm="xterm -fg white -bg black -fa 'Monospace' -fs 10"
