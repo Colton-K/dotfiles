@@ -2,22 +2,23 @@
 
 # set vars
 DIR=$(echo $PWD)
-OLDCONFIGDIR="$HOME/olddotfiles"
+OLDCONFIGDIR="$HOME/.olddotfiles"
 FILES="bashrc gitconfig vim vimrc zshrc Xresources"
 ZSHTHEMES="ckammes"
 
-# update
-echo "------------------"
-echo "Updating system..."
-sudo apt-get update
-sudo apt-get upgrade qq
 
-# install zsh and omz if needed (borrowed code)
+# install zsh and omz if needed
 which zsh 2> /dev/null
 if test $? -eq 0; then
     echo "Already installed ZSH"
 else
+    # update
+    echo "------------------"
+    echo "Updating system..."
+    sudo apt-get update
+    sudo apt-get upgrade qq
     sudo apt-get install zsh
+    
     chsh -s /usr/bin/zsh
     
     which wget 2> /dev/null
@@ -40,22 +41,43 @@ else
         echo "Press Ctrl-D once zsh opens"
         sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
     fi
+
+    # link oh-my-zsh theme to correct folder
+    echo "----------------------------------"
+    echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
+
+    for zshTheme in $ZSHTHEMES; do
+        if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
+            # if it is a link to something, remove the link
+            rm $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+        elif test -f $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
+            # if it is a file, move it to old directory
+            mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
+        fi
+        ln -s $DIR/$zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+    done
 fi
 
 # install programs
 # sublime text
-echo "-----------------------"
-echo "Install sublime text..."
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install -y apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update qq
-sudo apt-get install -y sublime-text
+which subl 2> /dev/null
+if test $? -gt 0; then
+    echo "-----------------------"
+    echo "Install sublime text..."
+    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+    sudo apt-get install -y apt-transport-https
+    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+    sudo apt-get update qq
+    sudo apt-get install -y sublime-text
+fi
 
 # fuzzy finder
-echo "-----------------------"
-echo "Install fuzzy finder..."
-sudo apt-get install -y fzf
+which fzf 2> /dev/null
+if test $? -gt 0; then
+    echo "-----------------------"
+    echo "Install fuzzy finder..."
+    sudo apt-get install -y fzf
+fi
 
 # create symbolic links for $files
 echo "-----------------------------------"
@@ -80,17 +102,4 @@ for file in $FILES; do
     ln -s $DIR/$file ~/.$file
 done
 
-# link oh-my-zsh theme to correct folder
-echo "----------------------------------"
-echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
 
-for zshTheme in $ZSHTHEMES; do
-    if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
-        # if it is a link to something, remove the link
-        rm $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
-    elif test -f $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
-        # if it is a file, move it to old directory
-        mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
-    fi
-    ln -s $DIR/$zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
-done

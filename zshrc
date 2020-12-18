@@ -99,4 +99,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gpu="sudo system76-power graphics"
 alias profile="system76-power profile"
-# alias xterm="xterm -fg white -bg black -fa 'Monospace' -fs 10"
+alias shutdown="sudo shutdown -h now"
+
+
+# configure fzf
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
+[ -f ~/.fxf.zsh ] && source /usr/bin/fzf
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# for vim
+#source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"

@@ -2,7 +2,7 @@
 
 # username@hostname
 usernamehostname() {
-   echo "%{$FG[046]%}%n@$(hostname)%{$reset_color%}" # 046 and 034 are both good colors
+   echo "%{$FG[034]%}%n@$(hostname)%{$reset_color%}" # 046 and 034 are both good colors
 }
 
 # make the directory visible

@@ -1,15 +1,15 @@
+" tab settings
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
-set mouse=a
-
 set autoindent
 
+" color settings
 syntax on
+set background=dark
 colorscheme monokai
-"colorscheme slate
+colorscheme gruvbox
 
 " relative numbering
 augroup numbertoggle
@@ -20,6 +20,7 @@ augroup END
 
 set number relativenumber
 
+set mouse=a
 " hotkey for switching mouse mode
 map <F8> :set mouse=a
 map <F7> :set mouse=""
@@ -34,3 +35,18 @@ au BufNewFile,BufRead *.cpp
 " run hotkeys
 au BufNewFile,BufRead *.py
     \ map <F9> :w <bar> :!clear; python3 %
+
+au BufNewFile,BufRead *.sh
+    \ map <F9> :w <bar> :!clear; ./%
+
+" templates
+if has("autocmd")
+    augroup templates
+        autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
+        autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
+        autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+    augroup END
+endif
+
+
+
