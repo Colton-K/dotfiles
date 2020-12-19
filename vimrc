@@ -9,6 +9,7 @@ set autoindent
 syntax on
 set background=dark
 colorscheme monokai
+let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
 
 " relative numbering
