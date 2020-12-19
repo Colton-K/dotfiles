@@ -55,7 +55,9 @@ if test $? -eq 0; then
     if test $? -gt 0; then
         echo "-----------------------"
         echo "Install fuzzy finder..."
-        sudo apt-get install -y fzf
+        #sudo apt-get install -y fzf
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+        ~/.fzf/install
     fi
 fi
 
