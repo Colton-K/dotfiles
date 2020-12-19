@@ -89,7 +89,7 @@ done
 
 # create symbolic links for $files
 echo "-----------------------------------"
-echo "Crete sym links for $FILES in $HOME"
+echo "Create sym links for $FILES in $HOME"
 cd $HOME
 
 for file in $FILES; do
