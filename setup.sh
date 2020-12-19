@@ -8,8 +8,7 @@ ZSHTHEMES="ckammes"
 
 
 # check your privilidge
-id -u
-if test $? -eq 0; then
+if test $EUID -eq 0; then
     # root
     # install zsh and omz if needed
     which zsh 2> /dev/null
@@ -61,13 +60,16 @@ if test $? -eq 0; then
     fi
 fi
 
-OH_MY_ZSH=$HOME/.oh-my-zsh/oh-my-zsh.sh
-if test -f "$OH_MY_ZSH"; then
-    echo "Already exists oh-my-zsh in $OH_MY_ZSH"
-    exit
-else
-    echo "Press Ctrl-D once zsh opens"
-    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+which zsh 2> /dev/null
+    if test $? -gt 0; then
+    OH_MY_ZSH=$HOME/.oh-my-zsh/oh-my-zsh.sh
+    if test -f "$OH_MY_ZSH"; then
+        echo "Already exists oh-my-zsh in $OH_MY_ZSH"
+        exit
+    else
+        echo "Press Ctrl-D once zsh opens"
+        sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    fi
 fi
 
 # link oh-my-zsh theme to correct folder
