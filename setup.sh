@@ -61,7 +61,7 @@ if test $EUID -eq 0; then
 fi
 
 which zsh 2> /dev/null
-    if test $? -gt 0; then
+if test $? -gt 0; then
     OH_MY_ZSH=$HOME/.oh-my-zsh/oh-my-zsh.sh
     if test -f "$OH_MY_ZSH"; then
         echo "Already exists oh-my-zsh in $OH_MY_ZSH"
