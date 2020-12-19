@@ -8,8 +8,7 @@ ZSHTHEMES="ckammes"
 
 
 # check your privilidge
-id -u
-if test $? -eq 0; then
+if test $EUID -eq 0; then
     # root
     # install zsh and omz if needed
     which zsh 2> /dev/null
