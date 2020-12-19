@@ -9,15 +9,9 @@ set autoindent
 syntax on
 set background=dark
 colorscheme monokai
+colorscheme blue " for some reason makes gruvbox dark on nd student machines...
 let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
-
-" relative numbering
-augroup numbertoggle
-      autocmd!
-      autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
-      autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
-augroup END
 
 set number relativenumber
 
@@ -42,12 +36,20 @@ au BufNewFile,BufRead *.sh
 
 " templates
 if has("autocmd")
+    " relative numbering
+    augroup numbertoggle
+          autocmd!
+          autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+          autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+    augroup END
+    " templates
     augroup templates
         autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
         autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
         autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
     augroup END
 endif
+
 
 
 
