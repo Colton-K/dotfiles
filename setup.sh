@@ -58,6 +58,14 @@ if [ "$1" != "noroot" ]; then
         git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
         ~/.fzf/install
     fi
+
+    # vim
+    which vim 2> /dev/null
+    if test $? -gt 0; then
+        echo "-----------------------"
+        echo "Install vim..."
+        sudo apt-get install -y vim
+    fi
 fi
 
 which zsh 2> /dev/null
