@@ -29,7 +29,8 @@ Plug 'vim-scripts/AutoComplPop'
 " Plug 'haya14busa/is.vim'
 
 " install fuzzy finder for vim
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " autocomplete brackets
