@@ -49,15 +49,24 @@ if [ "$1" != "noroot" ]; then
         sudo apt-get install -y sublime-text
     fi
 
-    # fuzzy finder
-    which fzf 2> /dev/null
+
+    # vim
+    which vim 2> /dev/null
     if test $? -gt 0; then
         echo "-----------------------"
-        echo "Install fuzzy finder..."
-        #sudo apt-get install -y fzf
-        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-        ~/.fzf/install
+        echo "Install vim..."
+        sudo apt-get install -y vim
     fi
+fi
+
+# fuzzy finder - shouldn't need root to install it
+which fzf 2> /dev/null
+if test $? -gt 0; then
+    echo "-----------------------"
+    echo "Install fuzzy finder..."
+    #sudo apt-get install -y fzf
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
 fi
 
 which zsh 2> /dev/null
