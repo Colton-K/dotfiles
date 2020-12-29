@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 alias gpu="sudo system76-power graphics"
 alias profile="system76-power profile"
 alias shutdown="sudo shutdown -h now"
-
+alias arduino-cli="~/.local/bin/arduino-cli"
 
 # configure fzf
 bindkey -M viins '^R' history-incremental-search-backward
