@@ -59,13 +59,13 @@ if [ "$1" != "noroot" ]; then
     fi
 fi
 
-# arduino cli
-test -f ~/bin/arduino-cl
-if test $? -gt 0; then
-    echo "-------------------------------------------"
-    echo "Installing arduino-cli to ~/bin/arduino-cli"
-    curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/.local/bin sh
-fi
+# arduino cli - not really working with esp8266 boards
+# test -f ~/bin/arduino-cl
+# if test $? -gt 0; then
+#     echo "-------------------------------------------"
+#     echo "Installing arduino-cli to ~/bin/arduino-cli"
+#     curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/.local/bin sh
+# fi
 
 # fuzzy finder - shouldn't need root to install it
 which fzf 2> /dev/null

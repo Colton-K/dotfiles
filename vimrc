@@ -28,6 +28,15 @@ Plug 'vim-scripts/AutoComplPop'
 " added a shortcut to press '\' later in vimrc if preferred
 " Plug 'haya14busa/is.vim'
 
+" commenting plugin
+Plug 'scrooloose/nerdcommenter'
+
+" be able to have multiple cursors like sublime text
+Plug 'terryma/vim-multiple-cursors'
+
+" file management
+Plug 'preservim/nerdtree'
+
 " install fuzzy finder for vim
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf'
@@ -44,6 +53,11 @@ call plug#end()
 
 " for nerdcommenter
 filetype plugin on
+nnoremap <C-/> :call NERDComment(0,"toggle")<CR>
+vnoremap <C-/> :call NERDComment(0,"toggle")<CR>
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
 
 " tab settings
 set expandtab
@@ -53,7 +67,7 @@ set shiftwidth=4
 set autoindent
 " color settings
 syntax on
-set background=dark
+"set background=dark
 colorscheme monokai
 colorscheme blue " for some reason makes gruvbox dark on nd student machines...
 let g:gruvbox_contrast_dark = 'medium' " but this doesn't????
@@ -80,6 +94,10 @@ set mouse=a
 map <F8> :call ToggleMouse() <CR>
 map <F7> :set mouse=""
 
+" press j and k simultaneously for escape so you don't have to move hands
+imap jk <Esc>
+imap kj <Esc>
+
 if has("autocmd")
     " make hotkeys
     au BufNewFile,BufRead *.c
@@ -94,27 +112,22 @@ if has("autocmd")
 
     au BufNewFile,BufRead *.sh
         \ map <F9> :w <bar> :!clear; ./% <CR>
+  
+    " comment hotkeys before found nerdcommenter
+    " augroup CommentUnComment
+    "     au BufNewFile,BufRead *.py
+    "         \ map <C-/> :s/^/# / <bar> :noh <CR>
+    "     "    \ map <C-/> call CommentUnComment() <bar> :noh <CR>
 
-    " WIP comment function
-"    function! CommentUnComment()
-"        if str =~ "# "
-"            return "\s/^/# /"
-"        else 
-"            return "\s/^# //"
-"        endif
-"   endfunc
-    
-    " comment hotkeys
-    au BufNewFile,BufRead *.py
-        \ map <C-/> :s/^/# / <bar> :noh <CR>
-    "    \ map <C-/> call CommentUnComment() <bar> :noh <CR>
+    "     au BufNewFile,BufRead *.cpp
+    "         \ map <C-/> :s/^/\/\/ / <bar> :noh <CR>
 
-    au BufNewFile,BufRead *.cpp
-        \ map <C-/> :s/^/\/\/ / <bar> :noh <CR>
+    "     au BufNewFile,BufRead *.c
+    "         \ map <C-/> :s/^/\/\/ / <bar> :noh <CR>
 
-    au BufNewFile,BufRead *.c
-        \ map <C-/> :s/^/\/\/ / <bar> :noh <CR>
-
+    "     au BufNewFile,BufRead *.sh
+    "         \ map <C-/> :s/^/# / <bar> :noh <CR>
+    " augroup endif
     " relative numbering
     augroup numbertoggle
           autocmd!
@@ -126,7 +139,12 @@ if has("autocmd")
         autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
         autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
         autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
-    augroup END
+    augroup endif
+    " Start NERDTree when Vim is started without file arguments.
+"    augroup nerdtree
+"        autocmd StdinReadPre * let s:std_in=1
+"        autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+"    augroup endif
 endif
 
 " make tab autocomplete
@@ -144,4 +162,13 @@ endfunction
 nnoremap \ :noh<return>
 
 " make fzf bound to ctrl-p
-nnoremap <C-p> :<C-u>FZF<CR> 
+nnoremap <C-p> :<C-u>FZF<CR>
+
+" map multiple line selection to be the same as in sublime text
+let g:multi_cursor_start_word_key = '<C-d>'
+let g:multi_cursor_next_key = '<C-d>'
+let g:multi_cursor_quit_key = '<Esc>'
+
+" map buttons to nerdtree
+nnoremap <C-n> :NERDTreeToggle <CR>
+nnoremap <C-f> :NERDTreeFind <CR>
