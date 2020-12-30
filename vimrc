@@ -20,6 +20,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/AutoComplPop'
 Plug 'vim-scripts/AutoComplPop'
 
+" show better suggestions
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
 " Plug 'neoclide/coc.nvim'
@@ -140,11 +143,13 @@ if has("autocmd")
         autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
         autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
     augroup endif
-    " Start NERDTree when Vim is started without file arguments.
-"    augroup nerdtree
+   augroup nerdtree
+        " Exit Vim if NERDTree is the only window left.
+        autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+       " Start NERDTree when Vim is started without file arguments.
 "        autocmd StdinReadPre * let s:std_in=1
 "        autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-"    augroup endif
+   augroup endif
 endif
 
 " make tab autocomplete

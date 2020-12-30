@@ -3,7 +3,7 @@
 # set vars
 DIR=$(echo $PWD)
 OLDCONFIGDIR="$HOME/.olddotfiles"
-FILES="bashrc gitconfig vim vimrc zshrc Xresources"
+FILES="profile bashrc gitconfig vim vimrc zshrc Xresources"
 ZSHTHEMES="ckammes"
 
 
@@ -37,17 +37,17 @@ if [ "$1" != "noroot" ]; then
         sudo apt-get -y install git
     fi
     # install programs
-    # sublime text
-    which subl 2> /dev/null
-    if test $? -gt 0; then
-        echo "-----------------------"
-        echo "Install sublime text..."
-        wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-        sudo apt-get install -y apt-transport-https
-        echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-        sudo apt-get update qq
-        sudo apt-get install -y sublime-text
-    fi
+    # sublime text - with all of my vim config, no longer needed
+    # which subl 2> /dev/null
+    # if test $? -gt 0; then
+    #     echo "-----------------------"
+    #     echo "Install sublime text..."
+    #     wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+    #     sudo apt-get install -y apt-transport-https
+    #     echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+    #     sudo apt-get update qq
+    #     sudo apt-get install -y sublime-text
+    # fi
 
 
     # vim
@@ -66,6 +66,14 @@ fi
 #     echo "Installing arduino-cli to ~/bin/arduino-cli"
 #     curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/.local/bin sh
 # fi
+
+# nodejs server needed for coc.nvim vim plugin - installs to $HOME/.local to avoid needing root privilidges
+which node 2> /dev/null
+if test $? -gt 0; then
+    echo "--------------"
+    echo "Install nodejs"
+    curl -sL install-node.now.sh/lts | bash -s -- --prefix=$HOME/.local
+fi
 
 # fuzzy finder - shouldn't need root to install it
 which fzf 2> /dev/null
