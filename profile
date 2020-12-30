@@ -26,4 +26,4 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export PATH=$PATH:$HOME/.local/bin/node
+# export PATH=$PATH:$HOME/.local/bin/node

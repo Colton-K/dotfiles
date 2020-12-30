@@ -68,12 +68,12 @@ fi
 # fi
 
 # nodejs server needed for coc.nvim vim plugin - installs to $HOME/.local to avoid needing root privilidges
-which node 2> /dev/null
-if test $? -gt 0; then
-    echo "--------------"
-    echo "Install nodejs"
-    curl -sL install-node.now.sh/lts | bash -s -- --prefix=$HOME/.local
-fi
+# which node 2> /dev/null
+# if test $? -gt 0; then
+#     echo "--------------"
+#     echo "Install nodejs"
+#     curl -sL install-node.now.sh/lts | bash -s -- --prefix=$HOME/.local
+# fi
 
 # fuzzy finder - shouldn't need root to install it
 which fzf 2> /dev/null
