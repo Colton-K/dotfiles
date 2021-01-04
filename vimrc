@@ -20,30 +20,37 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/AutoComplPop'
 Plug 'vim-scripts/AutoComplPop'
 
-" show better suggestions
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
 " Plug 'neoclide/coc.nvim'
 
-" Automatically clear search highlights after you move your cursor.
-" added a shortcut to press '\' later in vimrc if preferred
-" Plug 'haya14busa/is.vim'
-
 " commenting plugin
 Plug 'scrooloose/nerdcommenter'
+nnoremap <C-/> :call NERDComment(0,"toggle")<CR>
+vnoremap <C-/> :call NERDComment(0,"toggle")<CR>
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
 
 " be able to have multiple cursors like sublime text
 Plug 'terryma/vim-multiple-cursors'
+" map multiple line selection to be the same as in sublime text
+let g:multi_cursor_start_word_key = '<C-d>'
+let g:multi_cursor_next_key = '<C-d>'
+let g:multi_cursor_quit_key = '<Esc>'
 
 " file management
 Plug 'preservim/nerdtree'
+" map buttons to nerdtree
+nnoremap <C-n> :NERDTreeToggle <CR>
+nnoremap <C-f> :NERDTreeFind <CR>
+nnoremap <F7> :cd %:p:h<CR>:pwd<CR>
 
 " install fuzzy finder for vim
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+" make fzf bound to ctrl-p
+nnoremap <C-p> :<C-u>FZF<CR>
 
 " autocomplete brackets
 Plug 'jiangmiao/auto-pairs'
@@ -56,11 +63,6 @@ call plug#end()
 
 " for nerdcommenter
 filetype plugin on
-nnoremap <C-/> :call NERDComment(0,"toggle")<CR>
-vnoremap <C-/> :call NERDComment(0,"toggle")<CR>
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
 
 " tab settings
 set expandtab
@@ -95,7 +97,6 @@ endfunc
 set mouse=a
 " hotkey for switching mouse mode
 map <F8> :call ToggleMouse() <CR>
-map <F7> :set mouse=""
 
 " press j and k simultaneously for escape so you don't have to move hands
 imap jk <Esc>
@@ -131,6 +132,7 @@ if has("autocmd")
     "     au BufNewFile,BufRead *.sh
     "         \ map <C-/> :s/^/# / <bar> :noh <CR>
     " augroup endif
+    
     " relative numbering
     augroup numbertoggle
           autocmd!
@@ -143,14 +145,29 @@ if has("autocmd")
         autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
         autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
     augroup endif
-   augroup nerdtree
+    augroup nerdtree
         " Exit Vim if NERDTree is the only window left.
         autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-       " Start NERDTree when Vim is started without file arguments.
-"        autocmd StdinReadPre * let s:std_in=1
-"        autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-   augroup endif
+
+        " toggle automatically changing directory to whatever current file is in
+        let g:chDir = 1 " default to autochanging directory
+        function! ToggleChDir()
+            if g:chDir
+                cd ~
+                autocmd BufEnter * silent! lcd %:p:h
+                let g:chDir = 0
+            else
+                cd ~
+                let g:chDir = 1
+            endif
+        endfunction
+
+        nnoremap <F7> :call ToggleChDir() <CR>
+    augroup endif
 endif
+
+" automatically change working directory
+" set autochdir
 
 " make tab autocomplete
 function! Tab_Or_Complete()
@@ -164,16 +181,31 @@ endfunction
 :set dictionary="/usr/dict/words"
 
 " remove highlighted search words 
-nnoremap \ :noh<return>
+nnoremap \ :noh<CR>
 
-" make fzf bound to ctrl-p
-nnoremap <C-p> :<C-u>FZF<CR>
+" use netrw for file manager - I don't because it doesn't find your directory
+" automatically
+" set autochdir
+" let g:NetrwIsOpen=0
 
-" map multiple line selection to be the same as in sublime text
-let g:multi_cursor_start_word_key = '<C-d>'
-let g:multi_cursor_next_key = '<C-d>'
-let g:multi_cursor_quit_key = '<Esc>'
+" function! ToggleNetrw()
+"     if g:NetrwIsOpen
+"         let i = bufnr("$")
+"         while (i >= 1)
+"             if (getbufvar(i, "&filetype") == "netrw")
+"                 silent exe "bwipeout " . i 
+"             endif
+"             let i-=1
+"         endwhile
+"         let g:NetrwIsOpen=0
+"     else
+"         let g:NetrwIsOpen=1
+"         silent Lexplore
+"     endif
+" endfunction
 
-" map buttons to nerdtree
-nnoremap <C-n> :NERDTreeToggle <CR>
-nnoremap <C-f> :NERDTreeFind <CR>
+" nnoremap <C-n> :call ToggleNetrw() <CR>
+" let g:netrw_liststyle = 0 " for thin view
+" let g:netrw_banner = 0 " hide banner 
+" let g:netrw_winsize = 25 " set width to 25% of window size
+

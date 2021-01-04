@@ -36,6 +36,7 @@ if [ "$1" != "noroot" ]; then
         echo "Install git because git doesn't exist in $GIT"
         sudo apt-get -y install git
     fi
+
     # install programs
     # sublime text - with all of my vim config, no longer needed
     # which subl 2> /dev/null
@@ -49,6 +50,13 @@ if [ "$1" != "noroot" ]; then
     #     sudo apt-get install -y sublime-text
     # fi
 
+    # glances
+    which glances 2> /dev/null
+    if test $? -gt 0; then
+        echo "---------------"
+        echo "Install glances"
+        sudo apt-get install -y glances
+    fi
 
     # vim
     which vim 2> /dev/null
@@ -96,6 +104,7 @@ if test $? -gt 0; then
         sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
     fi
 fi
+
 
 # link oh-my-zsh theme to correct folder
 echo "----------------------------------"
