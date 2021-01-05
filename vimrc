@@ -28,6 +28,8 @@ Plug 'vim-scripts/AutoComplPop'
 Plug 'scrooloose/nerdcommenter'
 nnoremap <C-/> :call NERDComment(0,"toggle")<CR>
 vnoremap <C-/> :call NERDComment(0,"toggle")<CR>
+nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
+vnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
