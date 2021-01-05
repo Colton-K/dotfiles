@@ -211,3 +211,4 @@ nnoremap \ :noh<CR>
 " let g:netrw_banner = 0 " hide banner 
 " let g:netrw_winsize = 25 " set width to 25% of window size
 
+
