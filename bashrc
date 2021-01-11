@@ -89,6 +89,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
     
     alias schoolssh='ssh -X ckammes@student02.cse.nd.edu'
+
+    alias gpu="sudo system76-power graphics"
+    alias profile="system76-power profile"
+    alias shutdown="sudo shutdown -h now"
 fi
 
 # colored GCC warnings and errors
@@ -127,4 +131,3 @@ PS1=$PS1"\n$ "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-alias config='/usr/bin/git --git-dir=$HOME/work/dotfiles/ --work-tree=$HOME'

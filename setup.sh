@@ -22,7 +22,8 @@ if [ "$1" != "noroot" ]; then
         sudo apt-get upgrade qq
         sudo apt-get install zsh
         
-        chsh -s /usr/bin/zsh
+        # chsh -s /usr/bin/zsh
+        chsh -s /usr/bin/bash
     fi
 
     which wget 2> /dev/null
