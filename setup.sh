@@ -79,6 +79,21 @@ if [ "$1" != "noroot" ]; then
             sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
         fi
     fi
+
+    # link oh-my-zsh theme to correct folder
+    echo "----------------------------------"
+    echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
+
+    for zshTheme in $ZSHTHEMES; do
+        if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
+            # if it is a link to something, remove the link
+            rm $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+        elif test -f $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
+            # if it is a file, move it to old directory
+            mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
+        fi
+        ln -s $DIR/$zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+    done
 fi
 
 # arduino cli - not really working with esp8266 boards
@@ -106,21 +121,6 @@ if test $? -gt 0; then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
 fi
-
-# link oh-my-zsh theme to correct folder
-echo "----------------------------------"
-echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
-
-for zshTheme in $ZSHTHEMES; do
-    if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
-        # if it is a link to something, remove the link
-        rm $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
-    elif test -f $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
-        # if it is a file, move it to old directory
-        mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
-    fi
-    ln -s $DIR/$zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
-done
 
 # create symbolic links for $files
 echo "-----------------------------------"
