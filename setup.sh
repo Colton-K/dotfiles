@@ -22,7 +22,8 @@ if [ "$1" != "noroot" ]; then
         sudo apt-get upgrade qq
         sudo apt-get install zsh
         
-        chsh -s /usr/bin/zsh
+        # chsh -s /usr/bin/zsh
+        chsh -s /usr/bin/bash
     fi
 
     which wget 2> /dev/null
@@ -65,6 +66,34 @@ if [ "$1" != "noroot" ]; then
         echo "Install vim..."
         sudo apt-get install -y vim
     fi
+
+    # don't technically need this here, but I don't want to install it if not running with root, even if zsh is already installed on the machine
+    which zsh 2> /dev/null
+    if test $? -gt 0; then
+        OH_MY_ZSH=$HOME/.oh-my-zsh/oh-my-zsh.sh
+        if test -f "$OH_MY_ZSH"; then
+            echo "Already exists oh-my-zsh in $OH_MY_ZSH"
+            exit
+        else
+            echo "Press Ctrl-D once zsh opens"
+            sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+        fi
+    fi
+
+    # link oh-my-zsh theme to correct folder
+    echo "----------------------------------"
+    echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
+
+    for zshTheme in $ZSHTHEMES; do
+        if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
+            # if it is a link to something, remove the link
+            rm $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+        elif test -f $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
+            # if it is a file, move it to old directory
+            mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
+        fi
+        ln -s $DIR/$zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
+    done
 fi
 
 # arduino cli - not really working with esp8266 boards
@@ -92,34 +121,6 @@ if test $? -gt 0; then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
 fi
-
-which zsh 2> /dev/null
-if test $? -gt 0; then
-    OH_MY_ZSH=$HOME/.oh-my-zsh/oh-my-zsh.sh
-    if test -f "$OH_MY_ZSH"; then
-        echo "Already exists oh-my-zsh in $OH_MY_ZSH"
-        exit
-    else
-        echo "Press Ctrl-D once zsh opens"
-        sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-    fi
-fi
-
-
-# link oh-my-zsh theme to correct folder
-echo "----------------------------------"
-echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
-
-for zshTheme in $ZSHTHEMES; do
-    if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
-        # if it is a link to something, remove the link
-        rm $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
-    elif test -f $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
-        # if it is a file, move it to old directory
-        mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
-    fi
-    ln -s $DIR/$zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
-done
 
 # create symbolic links for $files
 echo "-----------------------------------"

@@ -55,7 +55,7 @@ Plug 'junegunn/fzf.vim'
 nnoremap <C-p> :<C-u>FZF<CR>
 
 " autocomplete brackets
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -188,6 +188,12 @@ nnoremap \ :noh<CR>
 " make a hotkey for searching
 nnoremap <C-g> :s///g 
 
+" ignore case while searching
+set ignorecase
+
+" show incremental search results
+set incsearch
+
 " use netrw for file manager - I don't because it doesn't find your directory
 " automatically
 " set autochdir
@@ -214,4 +220,8 @@ nnoremap <C-g> :s///g
 " let g:netrw_banner = 0 " hide banner 
 " let g:netrw_winsize = 25 " set width to 25% of window size
 
-
+" make pairs autocomplete instead of using a plugin
+:inoremap ( ()<Esc>:let leavechar=")"<CR>i
+:inoremap [ []<Esc>:let leavechar="]"<CR>i
+:inoremap { {}<Esc>:let leavechar="}"<CR>i
+:inoremap " ""<Esc>:let leavechar="""<CR>i
