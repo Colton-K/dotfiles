@@ -185,6 +185,9 @@ endfunction
 " remove highlighted search words 
 nnoremap \ :noh<CR>
 
+" make a hotkey for searching
+nnoremap <C-g> :s///g 
+
 " use netrw for file manager - I don't because it doesn't find your directory
 " automatically
 " set autochdir
