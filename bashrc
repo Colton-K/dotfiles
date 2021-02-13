@@ -93,6 +93,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias gpu="sudo system76-power graphics"
     alias profile="system76-power profile"
     alias shutdown="sudo shutdown -h now"
+    alias n="nautilus ."
+    alias ne="nautilus . && exit"
 fi
 
 # colored GCC warnings and errors
