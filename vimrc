@@ -120,7 +120,7 @@ if has("autocmd")
         \ map <F9> :w <bar> :!clear; ./% <CR>
 
     au BufNewFile,BufRead *.s
-        \ map <F9> :w <bar> :!clear; ../bin/albaasm ./% ./%.o && ../bin/albasim -i ./%.o <CR>
+        \ map <F9> :w <bar> :!clear; albaasm ./% ./%.o && albasim -i ./%.o <CR>
   
     " comment hotkeys before found nerdcommenter
     " augroup CommentUnComment

@@ -6,7 +6,6 @@ OLDCONFIGDIR="$HOME/.olddotfiles"
 FILES="profile bashrc gitconfig vim vimrc zshrc Xresources"
 ZSHTHEMES="ckammes"
 
-
 # check your privilidge
 if [ "$1" != "noroot" ]; then
     # root
@@ -144,3 +143,8 @@ for file in $FILES; do
     # create a symlink
     ln -s $DIR/$file ~/.$file
 done
+
+# add bin files to path
+echo "export PATH=\$PATH:$DIR/bin"
+echo "export PATH=\"\$PATH:$DIR/bin\"" >> "$DIR/bashrc"
+

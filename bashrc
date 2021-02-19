@@ -133,3 +133,9 @@ PS1=$PS1"\n$ "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+
+export PATH="$PATH:"/opt/microchip/xc16/v1.61/bin""
+export PATH="$PATH:"/work/albacore/bin""
+
+export QSYS_ROOTDIR="/home/colton/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
+export PATH="$PATH:/home/colton/work/dotfiles/bin"
