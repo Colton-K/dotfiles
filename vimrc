@@ -55,7 +55,7 @@ Plug 'junegunn/fzf.vim'
 nnoremap <C-p> :<C-u>FZF<CR>
 
 " autocomplete brackets
-" Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -224,7 +224,10 @@ set incsearch
 " let g:netrw_winsize = 25 " set width to 25% of window size
 
 " make pairs autocomplete instead of using a plugin
-:inoremap ( ()<Esc>:let leavechar=")"<CR>i
-:inoremap [ []<Esc>:let leavechar="]"<CR>i
-:inoremap { {}<Esc>:let leavechar="}"<CR>i
-:inoremap " ""<Esc>:let leavechar="""<CR>i
+" :inoremap ( ()<Esc>:let leavechar=")"<CR>i
+" :inoremap [ []<Esc>:let leavechar="]"<CR>i
+" :inoremap { {}<Esc>:let leavechar="}"<CR>i
+" :inoremap " ""<Esc>:let leavechar="""<CR>i
+
+
+" adjust hjlk default mapping
