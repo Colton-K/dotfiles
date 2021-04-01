@@ -95,6 +95,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias shutdown="sudo shutdown -h now"
     alias n="nautilus ."
     alias ne="nautilus . && exit"
+    alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
 fi
 
 # colored GCC warnings and errors
@@ -138,4 +139,5 @@ export PATH="$PATH:"/opt/microchip/xc16/v1.61/bin""
 export PATH="$PATH:"/work/albacore/bin""
 
 export QSYS_ROOTDIR="/home/colton/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
+export PATH="$PATH:/home/colton/work/dotfiles/bin"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"

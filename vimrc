@@ -18,16 +18,19 @@ call plug#begin('~/.vim/plugged')
 
 " automatically show vim's complete menu
 Plug 'vim-scripts/AutoComplPop'
-Plug 'vim-scripts/AutoComplPop'
 
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
 " Plug 'neoclide/coc.nvim'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" set signcolumn=no " because I don't want coc's stupid side bar thingy
 
 " commenting plugin
 Plug 'scrooloose/nerdcommenter'
 nnoremap <C-/> :call NERDComment(0,"toggle")<CR>
 vnoremap <C-/> :call NERDComment(0,"toggle")<CR>
+" inoremap <C-/> :call NERDComment(0,"toggle")<CR> " does not work as
+" expected...
 nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 vnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 let g:NERDSpaceDelims = 1

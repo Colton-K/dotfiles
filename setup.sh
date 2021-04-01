@@ -10,20 +10,20 @@ ZSHTHEMES="ckammes"
 if [ "$1" != "noroot" ]; then
     # root
     # install zsh and omz if needed
-    which zsh 2> /dev/null
-    if test $? -eq 0; then
-        echo "Already installed ZSH"
-    else
-        # update
-        echo "------------------"
-        echo "Updating system..."
-        sudo apt-get update
-        sudo apt-get upgrade qq
-        sudo apt-get install zsh
+    # which zsh 2> /dev/null
+    # if test $? -eq 0; then
+    #     echo "Already installed ZSH"
+    # else
+    #     # update
+    #     echo "------------------"
+    #     echo "Updating system..."
+    #     sudo apt-get update
+    #     sudo apt-get upgrade qq
+    #     sudo apt-get install zsh
         
-        # chsh -s /usr/bin/zsh
-        chsh -s /usr/bin/bash
-    fi
+    #     # chsh -s /usr/bin/zsh
+    #     chsh -s /usr/bin/bash
+    # fi
 
     which wget 2> /dev/null
     if ! test $? -eq 0; then
