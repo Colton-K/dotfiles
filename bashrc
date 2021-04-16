@@ -141,3 +141,12 @@ export PATH="$PATH:"/work/albacore/bin""
 export QSYS_ROOTDIR="/home/colton/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
+
+# make man pages look nice!
+export LESS_TERMCAP_mb=$'\e[1;34m' # main highlighted color
+export LESS_TERMCAP_md=$'\e[1;34m' # ^
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m' # variable name color
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;32m' # bottom bar color

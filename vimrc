@@ -17,7 +17,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 
 " automatically show vim's complete menu
-Plug 'vim-scripts/AutoComplPop'
+" Plug 'vim-scripts/AutoComplPop'
 
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
@@ -152,6 +152,7 @@ if has("autocmd")
         autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
         autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
         autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+        autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
     augroup endif
     augroup nerdtree
         " Exit Vim if NERDTree is the only window left.
