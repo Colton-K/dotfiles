@@ -97,6 +97,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias ne="nautilus . && exit"
     alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
 
+    # arm stuff
+    alias arm-gcc="$HOME/work/dotfiles/bin/arm-unknown-linux-gnu/bin/arm-unknown-linux-gnu-gcc"
+    alias simoutorder="$HOME/work/dotfiles/bin/simplesim-arm/sim-outorder"
+
     # for mplab to control pic microcontroller
     alias mp="sudo mplab_ide"
 fi
