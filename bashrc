@@ -97,9 +97,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ne="nautilus . && exit"
     alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
 
-    # arm stuff
-    alias arm-gcc="$HOME/work/dotfiles/bin/arm-unknown-linux-gnu/bin/arm-unknown-linux-gnu-gcc"
-    alias simoutorder="$HOME/work/dotfiles/bin/simplesim-arm/sim-outorder"
 
     # for mplab to control pic microcontroller
     alias mp="sudo mplab_ide"
@@ -157,3 +154,7 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m' # variable name color
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;32m' # bottom bar color
+
+# arm stuff for comp arch
+alias arm-gcc="$HOME/work/dotfiles/bin/arm-unknown-linux-gnu/bin/arm-unknown-linux-gnu-gcc"
+alias simoutorder="$HOME/work/dotfiles/bin/simplesim-arm/sim-outorder"
