@@ -17,3 +17,5 @@
         grapha = log --graph --decorate --abbrev-commit --pretty=oneline --all
         dw = diff --word-diff
         cloner = clone --recursive
+[pull]
+	rebase = false
