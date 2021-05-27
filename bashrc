@@ -160,3 +160,23 @@ export LESS_TERMCAP_us=$'\e[1;4;32m' # bottom bar color
 # arm stuff for comp arch
 alias arm-gcc="$HOME/work/dotfiles/bin/arm-unknown-linux-gnu/bin/arm-unknown-linux-gnu-gcc"
 alias simoutorder="$HOME/work/dotfiles/bin/simplesim-arm/sim-outorder"
+#export PATH="$PATH:/afs/crc.nd.edu/user/c/ckammes/dotfiles/bin"
+
+
+#export PATH="/afs/crc.nd.edu/x86_64_linux/t/tensorflow/2.0/gpu/bin:/afs/crc.nd.edu/x86_64_linux/Modules/4.5.0/bin:/opt/crc/usr/local/bin:/opt/sge/bin/lx-amd64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/afs/crc.nd.edu/user/c/condor/software/bin:/afs/crc.nd.edu/user/c/condor/software/sbin:/afs/crc.nd.edu/user/c/ckammes/bin:/afs/crc.nd.edu/x86_64_linux/c/cuda/11.0/lib64"
+export PATH="/afs/crc.nd.edu/x86_64_linux/t/tensorflow/2.0/gpu/bin:/afs/crc.nd.edu/x86_64_linux/c/cuda/10.0/bin:/afs/crc.nd.edu/user/m/ckammes/.local/bin:/afs/crc.nd.edu/x86_64_linux/Modules/4.5.0/bin:/opt/crc/usr/local/bin:/opt/sge/bin/lx-amd64:/usr/kerberos/sbin:/usr/kerberos/bin:/tmp/468215.1.gpu:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/afs/crc.nd.edu/user/c/condor/software/bin:/afs/crc.nd.edu/user/c/condor/software/sbin:/afs/crc.nd.edu/user/m/ckammes/bin:/afs/crc.nd.edu/x86_64_linux/n/nsight/2020.1"
+alias vi="vim"
+
+
+
+#Check http://crc.nd.edu/wiki for login problems
+#Contact crcsupport@nd.edu if further problems
+
+if [ -r /opt/crc/Modules/current/init/bash ]; then
+        source /opt/crc/Modules/current/init/bash
+fi
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi

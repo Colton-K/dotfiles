@@ -1,1 +1,1 @@
-/home/colton/work/dotfiles/vim
+/afs/crc.nd.edu/user/c/ckammes/dotfiles/vim
