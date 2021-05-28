@@ -101,8 +101,8 @@ endfunc
 
 set mouse=a
 " hotkey for switching mouse mode
-" map <F8> :call ToggleMouse() <CR>
-map <F8> :cd %:p:h<CR>
+map <F8> :call ToggleMouse() <CR>
+map <F7> :cd %:p:h<CR>
 
 " press j and k simultaneously for escape so you don't have to move hands
 imap jk <Esc>
@@ -172,7 +172,7 @@ if has("autocmd")
             endif
         endfunction
 
-        nnoremap <F7> :call ToggleChDir() <CR>
+        " nnoremap <F7> :call ToggleChDir() <CR>
     augroup endif
 endif
 
