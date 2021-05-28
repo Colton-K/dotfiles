@@ -1,0 +1,21 @@
+#Check http://crc.nd.edu/wiki for login problems
+#Contact crcsupport@nd.edu if further problems
+
+if [ -r /opt/crc/Modules/current/init/bash ]; then
+        source /opt/crc/Modules/current/init/bash
+fi
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+#Additional aliases
+
+#Additional modules
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export PATH=/afs/crc.nd.edu/x86_64_linux/t/tensorflow/2.0/cpu/bin:/afs/crc.nd.edu/x86_64_linux/Modules/4.5.0/bin:/opt/crc/usr/local/bin:/opt/sge/bin/lx-amd64:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/afs/crc.nd.edu/user/c/condor/software/bin:/afs/crc.nd.edu/user/c/condor/software/sbin:/afs/crc.nd.edu/user/c/ckammes/bin
+
