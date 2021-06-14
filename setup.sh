@@ -8,23 +8,6 @@ ZSHTHEMES="ckammes"
 
 # check your privilidge
 if [ "$1" != "noroot" ]; then
-    # root
-    # install zsh and omz if needed
-    # which zsh 2> /dev/null
-    # if test $? -eq 0; then
-    #     echo "Already installed ZSH"
-    # else
-    #     # update
-    #     echo "------------------"
-    #     echo "Updating system..."
-    #     sudo apt-get update
-    #     sudo apt-get upgrade qq
-    #     sudo apt-get install zsh
-        
-    #     # chsh -s /usr/bin/zsh
-    #     chsh -s /usr/bin/bash
-    # fi
-
     which wget 2> /dev/null
     if ! test $? -eq 0; then
         echo "Install wget because wget doesn't exist in $WGET"
@@ -36,19 +19,6 @@ if [ "$1" != "noroot" ]; then
         echo "Install git because git doesn't exist in $GIT"
         sudo apt-get -y install git
     fi
-
-    # install programs
-    # sublime text - with all of my vim config, no longer needed
-    # which subl 2> /dev/null
-    # if test $? -gt 0; then
-    #     echo "-----------------------"
-    #     echo "Install sublime text..."
-    #     wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-    #     sudo apt-get install -y apt-transport-https
-    #     echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-    #     sudo apt-get update qq
-    #     sudo apt-get install -y sublime-text
-    # fi
 
     # glances
     which glances 2> /dev/null
@@ -66,42 +36,8 @@ if [ "$1" != "noroot" ]; then
         sudo apt-get install -y vim
     fi
 
-    # don't technically need this here, but I don't want to install it if not running with root, even if zsh is already installed on the machine
-    # which zsh 2> /dev/null
-    # if test $? -gt 0; then
-    #     OH_MY_ZSH=$HOME/.oh-my-zsh/oh-my-zsh.sh
-    #     if test -f "$OH_MY_ZSH"; then
-    #         echo "Already exists oh-my-zsh in $OH_MY_ZSH"
-    #         exit
-    #     else
-    #         echo "Press Ctrl-D once zsh opens"
-    #         sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-    #     fi
-    # fi
-
-    # link oh-my-zsh theme to correct folder
-    # echo "----------------------------------"
-    # echo "Create sym links for $ZSHTHEMES in $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme"
-
-    # for zshTheme in $ZSHTHEMES; do
-    #     if test -L $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
-    #         # if it is a link to something, remove the link
-    #         rm $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
-    #     elif test -f $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme; then
-    #         # if it is a file, move it to old directory
-    #         mv $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme $OLDCONFIGDIR/$zshTheme.zsh-theme
-    #     fi
-    #     ln -s $DIR/$zshTheme.zsh-theme $HOME/.oh-my-zsh/themes/$zshTheme.zsh-theme
-    # done
+    sudo apt-get install -y vim-gtk3
 fi
-
-# arduino cli - not really working with esp8266 boards
-# test -f ~/bin/arduino-cl
-# if test $? -gt 0; then
-#     echo "-------------------------------------------"
-#     echo "Installing arduino-cli to ~/bin/arduino-cli"
-#     curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/.local/bin sh
-# fi
 
 # nodejs server needed for coc.nvim vim plugin - installs to $HOME/.local to avoid needing root privilidges
 # which node 2> /dev/null
