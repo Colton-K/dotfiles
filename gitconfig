@@ -19,3 +19,5 @@
         cloner = clone --recursive
 [pull]
 	rebase = false
+[credential]
+	helper = store

@@ -160,3 +160,5 @@ export LESS_TERMCAP_us=$'\e[1;4;32m' # bottom bar color
 # arm stuff for comp arch
 alias arm-gcc="$HOME/work/dotfiles/bin/arm-unknown-linux-gnu/bin/arm-unknown-linux-gnu-gcc"
 alias simoutorder="$HOME/work/dotfiles/bin/simplesim-arm/sim-outorder"
+
+alias crc="ckammes@crcfe01.crc.nd.edu"

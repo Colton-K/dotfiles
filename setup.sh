@@ -148,3 +148,6 @@ done
 echo "export PATH=\$PATH:$DIR/bin"
 echo "export PATH=\"\$PATH:$DIR/bin\"" >> "$DIR/bashrc"
 
+# reload config files
+xrdb ~/.Xresources
+source ~/.bashrc

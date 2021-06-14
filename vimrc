@@ -235,4 +235,6 @@ set incsearch
 " :inoremap " ""<Esc>:let leavechar="""<CR>i
 
 
-" adjust hjlk default mapping
+" make copy paste to/from system work
+set clipboard=unnamedplus
+
