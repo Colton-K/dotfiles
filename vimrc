@@ -174,6 +174,14 @@ if has("autocmd")
 
         " nnoremap <F7> :call ToggleChDir() <CR>
     augroup endif
+    " for easier web dev (autocompletes tags)
+    function s:CompleteTags()
+        inoremap <buffer> > ></<C-x><C-o><Esc>:startinsert!<CR><C-O>?</<CR>
+        inoremap <buffer> ><Leader> >
+        inoremap <buffer> ><CR> ></<C-x><C-o><Esc>:startinsert!<CR><C-O>?</<CR><CR><Tab><CR><Up><C-O>$
+        :noh " need to find a way to turn off highlighting
+    endfunction
+    autocmd BufRead,BufNewFile *.html,*.js,*.xml call s:CompleteTags() 
 endif
 
 " automatically change working directory
