@@ -167,3 +167,4 @@ alias sshfs="mkdir -p remotefs && sshfs ckammes@crcfe01.crc.nd.edu:/afs/crc.nd.e
 
 # echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold
 # echo 75 > /sys/class/power_supply/BAT0/charge_start_threshold
+export PATH="$PATH:/home/colton/work/dotfiles/bin"

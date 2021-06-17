@@ -37,6 +37,7 @@ if [ "$1" != "noroot" ]; then
     fi
 
     sudo apt-get install -y vim-gtk3
+    sudo apt-get install -y ripgrep # for vim file searching
 fi
 
 # nodejs server needed for coc.nvim vim plugin - installs to $HOME/.local to avoid needing root privilidges

@@ -48,7 +48,7 @@ let g:multi_cursor_quit_key = '<Esc>'
 Plug 'preservim/nerdtree'
 " map buttons to nerdtree
 nnoremap <C-n> :NERDTreeToggle <CR>
-nnoremap <C-f> :NERDTreeFind <CR>
+nnoremap <C-m> :NERDTreeFind <CR>
 nnoremap <F7> :cd %:p:h<CR>:pwd<CR>
 
 " install fuzzy finder for vim
@@ -56,6 +56,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 " make fzf bound to ctrl-p
 nnoremap <C-p> :<C-u>FZF<CR>
+" make file search bound to ctrl-f
+nnoremap <C-f> :Rg<CR>
 
 " autocomplete brackets
 Plug 'jiangmiao/auto-pairs'
