@@ -161,8 +161,8 @@ export LESS_TERMCAP_us=$'\e[1;4;32m' # bottom bar color
 alias arm-gcc="$HOME/work/dotfiles/bin/arm-unknown-linux-gnu/bin/arm-unknown-linux-gnu-gcc"
 alias simoutorder="$HOME/work/dotfiles/bin/simplesim-arm/sim-outorder"
 
-alias crc="ckammes@crcfe01.crc.nd.edu"
+alias crc="ssh ckammes@crcfe01.crc.nd.edu"
 
 
-echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold
-echo 75 > /sys/class/power_supply/BAT0/charge_start_threshold
+# echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold
+# echo 75 > /sys/class/power_supply/BAT0/charge_start_threshold
