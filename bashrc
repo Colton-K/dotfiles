@@ -162,6 +162,7 @@ alias arm-gcc="$HOME/work/dotfiles/bin/arm-unknown-linux-gnu/bin/arm-unknown-lin
 alias simoutorder="$HOME/work/dotfiles/bin/simplesim-arm/sim-outorder"
 
 alias crc="ssh ckammes@crcfe01.crc.nd.edu"
+alias sshfs="mkdir -p remotefs && sshfs ckammes@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/c/ckammes/ remotefs "
 
 
 # echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold
