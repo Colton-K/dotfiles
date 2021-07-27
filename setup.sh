@@ -26,6 +26,7 @@ if [ "$1" != "noroot" ]; then
         echo "---------------"
         echo "Install glances"
         sudo apt-get install -y glances
+        # sudo dnf install glances
     fi
 
     # vim
@@ -34,10 +35,12 @@ if [ "$1" != "noroot" ]; then
         echo "-----------------------"
         echo "Install vim..."
         sudo apt-get install -y vim
+        # sudo dnf install vim-enhanced
     fi
 
     sudo apt-get install -y vim-gtk3
     sudo apt-get install -y ripgrep # for vim file searching
+    # sudo dnf install ripgrep
 fi
 
 # nodejs server needed for coc.nvim vim plugin - installs to $HOME/.local to avoid needing root privilidges

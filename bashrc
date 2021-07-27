@@ -99,6 +99,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias ne="nautilus . && exit"
     alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
 
+    alias vi="vim "
+
 
     # for mplab to control pic microcontroller
     alias mp="sudo mplab_ide"
@@ -141,12 +143,6 @@ PS1=$PS1"\n$ "
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
-export PATH="$PATH:"/opt/microchip/xc16/v1.61/bin""
-export PATH="$PATH:"/work/albacore/bin""
-
-export QSYS_ROOTDIR="/home/colton/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
 
 # make man pages look nice!
 export LESS_TERMCAP_mb=$'\e[1;34m' # main highlighted color
@@ -157,14 +153,11 @@ export LESS_TERMCAP_so=$'\e[01;33m' # variable name color
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;32m' # bottom bar color
 
-# arm stuff for comp arch
-alias arm-gcc="$HOME/work/dotfiles/bin/arm-unknown-linux-gnu/bin/arm-unknown-linux-gnu-gcc"
-alias simoutorder="$HOME/work/dotfiles/bin/simplesim-arm/sim-outorder"
-
 alias crc="ssh ckammes@crcfe01.crc.nd.edu"
-alias sshfs="mkdir -p remotefs && sshfs ckammes@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/c/ckammes/ remotefs "
+alias crcfs="mkdir -p remotefs && sshfs ckammes@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/c/ckammes/ remotefs "
 
-
+# set battery charge thresholds
 # echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold
 # echo 75 > /sys/class/power_supply/BAT0/charge_start_threshold
+
 export PATH="$PATH:/home/colton/work/dotfiles/bin"

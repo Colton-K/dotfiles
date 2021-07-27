@@ -17,7 +17,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 
 " automatically show vim's complete menu
-" Plug 'vim-scripts/AutoComplPop'
+Plug 'vim-scripts/AutoComplPop'
 
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
@@ -60,7 +60,10 @@ nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-f> :Rg<CR>
 
 " autocomplete brackets
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
+
+" good light colorscheme
+Plug 'endel/vim-github-colorscheme'
 
 call plug#end()
 
