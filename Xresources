@@ -45,3 +45,5 @@ xterm*color15: #ffffff
 
 ! Orange
 !xterm*cursorColor:white
+!
+! Mwm*XTerm.clientDecoration: none
