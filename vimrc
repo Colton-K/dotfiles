@@ -60,7 +60,7 @@ nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-f> :Rg<CR>
 
 " autocomplete brackets
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 " good light colorscheme
 Plug 'endel/vim-github-colorscheme'
