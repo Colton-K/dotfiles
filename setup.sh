@@ -3,7 +3,7 @@
 # set vars
 DIR=$(echo $PWD)
 OLDCONFIGDIR="$HOME/.olddotfiles"
-FILES="profile bashrc gitconfig vim vimrc zshrc Xresources"
+FILES="profile bashrc gitconfig vim vimrc zshrc Xresources tmux.conf"
 ZSHTHEMES="ckammes"
 
 # check your privilidge

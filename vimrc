@@ -65,6 +65,10 @@ nnoremap <C-f> :Rg<CR>
 " good light colorscheme
 Plug 'endel/vim-github-colorscheme'
 
+" linting for style ;)
+Plug 'vim-syntastic/syntastic'
+let g:syntastic_cpp_checkers = ['cpplint']
+
 call plug#end()
 
 " ----------------
