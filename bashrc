@@ -169,3 +169,20 @@ alias limitcharge="echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold 
 alias tmux="env TERM=xterm-256color tmux"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/escnfs/home/ckammes/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/escnfs/home/ckammes/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/escnfs/home/ckammes/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/escnfs/home/ckammes/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="$PATH:/escnfs/home/ckammes/work/dotfiles/bin"

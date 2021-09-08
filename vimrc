@@ -21,16 +21,13 @@ Plug 'vim-scripts/AutoComplPop'
 
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
-" Plug 'neoclide/coc.nvim'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " set signcolumn=no " because I don't want coc's stupid side bar thingy
 
 " commenting plugin
 Plug 'scrooloose/nerdcommenter'
 nnoremap <C-/> :call NERDComment(0,"toggle")<CR>
 vnoremap <C-/> :call NERDComment(0,"toggle")<CR>
-" inoremap <C-/> :call NERDComment(0,"toggle")<CR> " does not work as
-" expected...
 nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 vnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 let g:NERDSpaceDelims = 1
@@ -60,7 +57,7 @@ nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <C-f> :Rg<CR>
 
 " autocomplete brackets
-" Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " good light colorscheme
 Plug 'endel/vim-github-colorscheme'
@@ -94,6 +91,7 @@ colorscheme gruvbox
 
 " highlight search
 set hlsearch
+" set number 
 set number relativenumber
 
 " mouse support settings
@@ -163,6 +161,7 @@ if has("autocmd")
         autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
         autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
         autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
+        autocmd BufNewFile Makefile 0r ~/.vim/templates/skeleton.makefile
     augroup endif
     augroup nerdtree
         " Exit Vim if NERDTree is the only window left.
