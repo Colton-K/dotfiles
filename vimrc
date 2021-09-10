@@ -21,7 +21,7 @@ Plug 'vim-scripts/AutoComplPop'
 
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " set signcolumn=no " because I don't want coc's stupid side bar thingy
 
 " commenting plugin
