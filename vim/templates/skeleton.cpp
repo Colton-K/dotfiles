@@ -1,10 +1,8 @@
 #include <iostream>
 
-#define CIN std::cin
-#define COUT std::cout
-#define ENDL std::endl
+using namespace std;
 
-int main() {
+int main(int argc, char *argv[]) {
 
     return 0;
 }

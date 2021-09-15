@@ -152,11 +152,11 @@ if has("autocmd")
     " augroup endif
     
     " relative numbering
-    augroup numbertoggle
-          autocmd!
-          autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
-          autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
-    augroup END
+    " augroup numbertoggle
+    "       autocmd!
+    "       autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+    "       autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+    " augroup END
     " templates
     augroup templates
         autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
