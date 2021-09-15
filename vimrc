@@ -91,8 +91,10 @@ colorscheme gruvbox
 
 " highlight search
 set hlsearch
-" set number 
-set number relativenumber
+set number 
+" set number relativenumber
+set norelativenumber
+set cursorline
 
 " mouse support settings
 function! ToggleMouse()
