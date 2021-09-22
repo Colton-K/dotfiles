@@ -63,8 +63,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'endel/vim-github-colorscheme'
 
 " linting for style ;)
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 let g:syntastic_cpp_checkers = ['cpplint']
+" let g:syntastic_python_checkers = ['pylint']
 
 call plug#end()
 
@@ -192,6 +193,8 @@ if has("autocmd")
         :noh " need to find a way to turn off highlighting
     endfunction
     autocmd BufRead,BufNewFile *.html,*.js,*.xml call s:CompleteTags() 
+    " update what is displayed on tmux status bar
+    autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
 endif
 
 " automatically change working directory
