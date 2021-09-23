@@ -4,11 +4,11 @@ xterm*faceAntialias:true
 xterm*selectToClipboard: true
 
 xterm*termName:xterm-color
-xterm*Background:black
+xterm*Background:#080808
 xterm*Foreground:white
 
 ! Lighter Black & Gray
-xterm*background: #0c0c0c
+! xterm*background: #0c0c0c
 !xterm*foreground: #aaaaaa
 
 ! Black & DarkGray
