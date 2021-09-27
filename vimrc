@@ -64,8 +64,9 @@ Plug 'endel/vim-github-colorscheme'
 
 " linting for style ;)
 " Plug 'vim-syntastic/syntastic'
-let g:syntastic_cpp_checkers = ['cpplint']
-" let g:syntastic_python_checkers = ['pylint']
+
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_python_checkers = ['pylint']
 
 call plug#end()
 
