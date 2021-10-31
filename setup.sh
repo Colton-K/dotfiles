@@ -84,6 +84,21 @@ for file in $FILES; do
     ln -s $DIR/$file ~/.$file
 done
 
+# create sym links for nvim
+echo "-----------------------------------"
+echo "Create sym links for nvim files"
+
+if [ -d ".config/nvim" ]; then
+    # back it up
+    mv ".config/nvim" ".config/nvim_old" 
+fi
+
+# link everything
+ln -s $DIR/config/nvim ~/.config/nvim
+echo "-----------------------------------"
+
+
+
 # add bin files to path
 echo "export PATH=\$PATH:$DIR/bin"
 echo "export PATH=\"\$PATH:$DIR/bin\"" >> "$DIR/bashrc"
