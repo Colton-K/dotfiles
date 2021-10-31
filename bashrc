@@ -99,7 +99,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias ne="nautilus . && exit"
     alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
 
-    alias vi="vim "
+    alias vi="nvim "
 
 
     # for mplab to control pic microcontroller

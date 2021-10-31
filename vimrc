@@ -260,3 +260,4 @@ set incsearch
 " make copy paste to/from system work
 set clipboard=unnamedplus
 
+set laststatus=0
