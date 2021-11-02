@@ -4,6 +4,6 @@ curl https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh 
 chmod 755 miniconda.sh
 ./miniconda.sh
 
-conda install -c conda-forge tmux vim nodejs
+conda install -c conda-forge tmux vim nodejs nvim
 
 

@@ -17,12 +17,16 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 
 " automatically show vim's complete menu
-Plug 'vim-scripts/AutoComplPop'
+" Plug 'vim-scripts/AutoComplPop'
 
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" set signcolumn=no " because I don't want coc's stupid side bar thingy
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+set signcolumn=no " because I don't want coc's stupid side bar thingy
+" run :CocInstall coc-pyright coc-clangd coc-json coc-vimlsp 
+" run :CocUpdate
+" will have to install clangd
+" sudo apt-get install clangd
 
 " commenting plugin
 Plug 'scrooloose/nerdcommenter'
@@ -222,7 +226,7 @@ nnoremap <C-g> :s///g
 set ignorecase
 
 " show incremental search results
-set incsearch
+" set incsearch
 
 " use netrw for file manager - I don't because it doesn't find your directory
 " automatically
@@ -260,4 +264,5 @@ set incsearch
 " make copy paste to/from system work
 set clipboard=unnamedplus
 
+" remove status bar at bottom
 set laststatus=0
