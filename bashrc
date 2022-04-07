@@ -100,6 +100,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
 
     alias vi="nvim "
+    alias c="xclip -sel c"
+    alias v="xclip -o -sel c"
 
 
     # for mplab to control pic microcontroller

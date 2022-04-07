@@ -16,6 +16,15 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
+" a little game
+" Plug 'ThePrimeagen/vim-be-good'
+
+" delete surrounding characters
+Plug 'tpope/vim-surround'
+
+" match beginning and end of more tags with %
+Plug 'andymass/vim-matchup'
+
 " automatically show vim's complete menu
 " Plug 'vim-scripts/AutoComplPop'
 
@@ -23,6 +32,11 @@ call plug#begin('~/.vim/plugged')
 " NEEDS NODEJS SERVER - not good for student machines
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 set signcolumn=no " because I don't want coc's stupid side bar thingy
+nmap gd <Plug>(coc-definition)
+nmap gr <Plug>(coc-references)
+" nmap <leader>gd <Plug>(coc-definition)
+" nmap <leader>gr <Plug>(coc-references)
+" c-o opens last file, c-i opens next file
 " run :CocInstall coc-pyright coc-clangd coc-json coc-vimlsp 
 " run :CocUpdate
 " will have to install clangd
@@ -30,6 +44,11 @@ set signcolumn=no " because I don't want coc's stupid side bar thingy
 
 " commenting plugin
 Plug 'scrooloose/nerdcommenter'
+"nnoremap <C-/> :call nerdcommenter#Comment(0, "toggle")<CR>
+"vnoremap <C-/> :call nerdcommenter#Comment(0,"toggle")<CR>
+"nnoremap <C-_> :call nerdcommenter#Comment()<CR>
+"vnoremap <C-_> :call nerdcommenter#Comment()<CR>
+
 nnoremap <C-/> :call NERDComment(0,"toggle")<CR>
 vnoremap <C-/> :call NERDComment(0,"toggle")<CR>
 nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
@@ -66,11 +85,15 @@ Plug 'jiangmiao/auto-pairs'
 " good light colorscheme
 Plug 'endel/vim-github-colorscheme'
 
+" color scheme
+" Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+
 " linting for style ;)
 " Plug 'vim-syntastic/syntastic'
 
 let g:syntastic_cpp_cpplint_exec = 'cpplint'
 let g:syntastic_python_checkers = ['pylint']
+
 
 call plug#end()
 

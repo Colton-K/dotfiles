@@ -95,8 +95,14 @@ fi
 
 # link everything
 ln -s $DIR/config/nvim ~/.config/nvim
-echo "-----------------------------------"
 
+# do it for coc config too
+if [ -d ".config/coc" ]; then
+    # back it up
+    mv ".config/coc" ".config/coc_old" 
+fi
+ln -s $DIR/config/coc ~/.config/coc
+echo "-----------------------------------"
 
 
 # add bin files to path

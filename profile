@@ -29,3 +29,4 @@ fi
 # export PATH=$PATH:$HOME/.local/bin/node
 
 export QSYS_ROOTDIR="/home/colton/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
+
