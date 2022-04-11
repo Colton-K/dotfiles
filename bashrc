@@ -99,7 +99,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias ne="nautilus . && exit"
     alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
 
-    alias vi="nvim "
+    alias vi="nvim.appimage "
+    alias c="xclip -sel c"
+    alias v="xclip -o -sel c"
 
 
     # for mplab to control pic microcontroller
@@ -161,43 +163,15 @@ alias crcfs="mkdir -p remotefs && sshfs ckammes@crcfe01.crc.nd.edu:/afs/crc.nd.e
 # echo 75 > /sys/class/power_supply/BAT0/charge_start_threshold
 
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
 
-alias limitcharge="echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold && echo 75 > /sys/class/power_supply/BAT0/charge_start_threshold"
+alias limitcharge="sudo echo 80 > /sys/class/power_supply/BAT0/charge_stop_threshold && echo 75 > /sys/class/power_supply/BAT0/charge_start_threshold"
 
 # make using tmux nice
 alias tmux="env TERM=xterm-256color tmux"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/escnfs/home/ckammes/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/escnfs/home/ckammes/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/escnfs/home/ckammes/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/escnfs/home/ckammes/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export PATH="$PATH:/escnfs/home/ckammes/work/dotfiles/bin"
 
 # allow for proper alt tab
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
-export PATH="$PATH:/home/colton/work/dotfiles/bin"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
