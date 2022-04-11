@@ -99,7 +99,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias ne="nautilus . && exit"
     alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
 
-    alias vi="nvim "
+    alias vi="nvim.appimage "
     alias c="xclip -sel c"
     alias v="xclip -o -sel c"
 
@@ -174,3 +174,4 @@ gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
+export PATH="$PATH:/home/colton/work/dotfiles/bin"
