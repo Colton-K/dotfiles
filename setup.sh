@@ -107,7 +107,8 @@ echo "-----------------------------------"
 
 # add bin files to path
 echo "export PATH=\$PATH:$DIR/bin"
-echo "export PATH=\"\$PATH:$DIR/bin\"" >> "$DIR/bashrc"
+echo "export PATH=\"\$PATH:$DIR/bin\"" >> "$DIR/bashrc" # add bin files
+echo "export PATH=\"\$PATH:$DIR/bin/node-v16.14.2-linux-x64/bin\"" >> "$DIR/bashrc" # add nodejs files
 
 # reload config files
 xrdb ~/.Xresources
