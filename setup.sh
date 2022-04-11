@@ -7,7 +7,7 @@ FILES="profile bashrc gitconfig vim vimrc zshrc Xresources tmux.conf"
 ZSHTHEMES="ckammes"
 
 # check your privilidge
-if [ "$1" != "noroot" ]; then
+if [ "$1" == "root" ]; then
     which wget 2> /dev/null
     if ! test $? -eq 0; then
         echo "Install wget because wget doesn't exist in $WGET"
