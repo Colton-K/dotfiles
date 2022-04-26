@@ -1,0 +1,50 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - ${MOUNT_POINT}/homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+  plex:
+    image: "lscr.io/linuxserver/plex"
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+    volumes:
+      - ${MOUNT_POINT}/library:/config
+      - ${MOUNT_POINT}/transmission/completed:/tv
+      - ${MOUNT_POINT}/movies:/movies
+    restart: unless-stopped
+  transmission:
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - '/bigDrive/transmission:/data'
+    environment:
+      - OPENVPN_PROVIDER=${VPN_PROVIDER}
+      - OPENVPN_CONFIG=${VPN_CONFIG}
+      - OPENVPN_USERNAME=${VPN_USERNAME}
+      - OPENVPN_PASSWORD=${VPN_PASSWORD}
+      - NETWORK=192.168.1.0/24
+    ports:
+      - '9091:9091'
+    image: haugene/transmission-openvpn
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+    restart: unless-stopped
+  nginx:
+    image: nginx:latest
+    ports: 
+      - 80:80
+    volumes:
+      - ${WEBSITE_LOCATION}:/usr/share/nginx/html
+    restart: unless-stopped
