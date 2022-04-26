@@ -44,15 +44,11 @@ nmap gr <Plug>(coc-references)
 
 " commenting plugin
 Plug 'scrooloose/nerdcommenter'
-"nnoremap <C-/> :call nerdcommenter#Comment(0, "toggle")<CR>
-"vnoremap <C-/> :call nerdcommenter#Comment(0,"toggle")<CR>
-"nnoremap <C-_> :call nerdcommenter#Comment()<CR>
-"vnoremap <C-_> :call nerdcommenter#Comment()<CR>
+nnoremap <C-/> :call nerdcommenter#Comment(0,"toggle")<CR>
+vnoremap <C-/> :call nerdcommenter#Comment(0,"toggle")<CR>
+nnoremap <C-_> :call nerdcommenter#Comment(0,"toggle")<CR>
+vnoremap <C-_> :call nerdcommenter#Comment(0,"toggle")<CR>
 
-nnoremap <C-/> :call NERDComment(0,"toggle")<CR>
-vnoremap <C-/> :call NERDComment(0,"toggle")<CR>
-nnoremap <C-_> :call NERDComment(0,"toggle")<CR>
-vnoremap <C-_> :call NERDComment(0,"toggle")<CR>
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
@@ -112,7 +108,7 @@ set shiftwidth=4
 set autoindent
 " color settings
 syntax on
-"set background=dark
+" set background=dark
 colorscheme monokai
 colorscheme blue " for some reason makes gruvbox dark on nd student machines...
 let g:gruvbox_contrast_dark = 'medium' " but this doesn't????
