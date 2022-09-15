@@ -2,8 +2,8 @@
 	email = ckammes@nd.edu
 	name = Colton Kammes
 
-
-
+[tool]
+    diff = vimdiff
 
 [alias]
         pr = pull --rebase

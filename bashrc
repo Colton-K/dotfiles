@@ -146,14 +146,34 @@ PS1=$PS1"\n$ "
 
 
 
+RED="31"
+GREEN="32"
+BLUE="34"
+BOLDBLUE="\e[1;${BLUE}m"
+BOLDGREEN="\e[1;${GREEN}m"
+UNDERLINEDGREEN="\e[4;${GREEN}m"
+ITALICRED="\e[3;${RED}m"
+ENDCOLOR="\e[0m"
+
 # make man pages look nice!
-export LESS_TERMCAP_mb=$'\e[1;34m' # main highlighted color
-export LESS_TERMCAP_md=$'\e[1;34m' # ^
+export LESS_TERMCAP_mb=$'\e[1;32m' # main highlighted color
+export LESS_TERMCAP_md=$'\e[1;32m' # ^ 34 for blue
 export LESS_TERMCAP_me=$'\e[0m'
 export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m' # variable name color
 export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;32m' # bottom bar color
+export LESS_TERMCAP_us=$'\e[0;4;32m' # bottom bar color
+export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
+
+
+# export LESS_TERMCAP_mb="${BOLDBLUE}" # main highlighted color
+# export LESS_TERMCAP_md=${BOLDBLUE} # ^
+# export LESS_TERMCAP_me=${ENDCOLOR}
+# export LESS_TERMCAP_se=${ENDCOLOR}
+# export LESS_TERMCAP_so=${BOLDGREEN} # variable name color
+# export LESS_TERMCAP_ue=$'\e[0m'
+# export LESS_TERMCAP_us=${BOLDGREEN} # bottom bar color
+# export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 
 alias crc="ssh ckammes@crcfe01.crc.nd.edu"
 alias crcfs="mkdir -p remotefs && sshfs ckammes@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/c/ckammes/ remotefs "
@@ -175,3 +195,6 @@ gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
+export PATH="$PATH:/home/colton/work/dotfiles/bin"
+export PATH="$PATH:/home/colton/work/dotfiles/bin"
+export PATH="$PATH:/home/colton/work/chromium-latest-linux"

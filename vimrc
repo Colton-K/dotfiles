@@ -16,8 +16,8 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
-" a little game
-" Plug 'ThePrimeagen/vim-be-good'
+" flex syntax 
+Plug 'justinmk/vim-syntax-extra'
 
 " delete surrounding characters
 Plug 'tpope/vim-surround'
@@ -48,6 +48,8 @@ nnoremap <C-/> :call nerdcommenter#Comment(0,"toggle")<CR>
 vnoremap <C-/> :call nerdcommenter#Comment(0,"toggle")<CR>
 nnoremap <C-_> :call nerdcommenter#Comment(0,"toggle")<CR>
 vnoremap <C-_> :call nerdcommenter#Comment(0,"toggle")<CR>
+nnoremap // :call nerdcommenter#Comment(0,"toggle")<CR>
+vnoremap // :call nerdcommenter#Comment(0,"toggle")<CR>
 
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
@@ -82,7 +84,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'endel/vim-github-colorscheme'
 
 " color scheme
-" Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 
 " linting for style ;)
 " Plug 'vim-syntastic/syntastic'

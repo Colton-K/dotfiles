@@ -1,5 +1,5 @@
 xterm*faceName: Monospace
-xterm*faceSize: 11
+xterm*faceSize: 10
 xterm*faceAntialias:true
 xterm*selectToClipboard: true
 
@@ -47,3 +47,5 @@ xterm*color15: #ffffff
 !xterm*cursorColor:white
 !
 ! Mwm*XTerm.clientDecoration: none
+
+xterm*scrollBar: false
