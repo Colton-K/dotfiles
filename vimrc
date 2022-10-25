@@ -16,6 +16,9 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
+" indent line
+" Plug 'Yggdroot/indentLine'
+
 " flex syntax 
 Plug 'justinmk/vim-syntax-extra'
 
@@ -62,13 +65,6 @@ let g:multi_cursor_start_word_key = '<C-d>'
 let g:multi_cursor_next_key = '<C-d>'
 let g:multi_cursor_quit_key = '<Esc>'
 
-" file management
-Plug 'preservim/nerdtree'
-" map buttons to nerdtree
-nnoremap <C-n> :NERDTreeToggle <CR>
-nnoremap <C-m> :NERDTreeFind <CR>
-nnoremap <F7> :cd %:p:h<CR>:pwd<CR>
-
 " install fuzzy finder for vim
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -82,9 +78,6 @@ Plug 'jiangmiao/auto-pairs'
 
 " good light colorscheme
 Plug 'endel/vim-github-colorscheme'
-
-" color scheme
-Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 
 " linting for style ;)
 " Plug 'vim-syntastic/syntastic'
@@ -110,10 +103,7 @@ set shiftwidth=4
 set autoindent
 " color settings
 syntax on
-" set background=dark
-colorscheme monokai
-colorscheme blue " for some reason makes gruvbox dark on nd student machines...
-let g:gruvbox_contrast_dark = 'medium' " but this doesn't????
+set background=dark
 colorscheme gruvbox
 
 " highlight search
@@ -161,6 +151,9 @@ if has("autocmd")
 
     au BufNewFile,BufRead *.s
         \ map <F9> :w <bar> :!clear; albaasm ./% ./%.o && albasim -i ./%.o <CR>
+    
+    " bison syntax support
+    autocmd BufRead,BufNewFile *.y,*.ypp,*.ym,*.bison setlocal ft=yacc
   
     " comment hotkeys before found nerdcommenter
     " augroup CommentUnComment
@@ -192,25 +185,6 @@ if has("autocmd")
         autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
         autocmd BufNewFile Makefile 0r ~/.vim/templates/skeleton.makefile
     augroup endif
-    augroup nerdtree
-        " Exit Vim if NERDTree is the only window left.
-        autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-        " toggle automatically changing directory to whatever current file is in
-        let g:chDir = 1 " default to autochanging directory
-        function! ToggleChDir()
-            if g:chDir
-                cd ~
-                autocmd BufEnter * silent! lcd %:p:h
-                let g:chDir = 0
-            else
-                cd ~
-                let g:chDir = 1
-            endif
-        endfunction
-
-        " nnoremap <F7> :call ToggleChDir() <CR>
-    augroup endif
     " for easier web dev (autocompletes tags)
     function s:CompleteTags()
         inoremap <buffer> > ></<C-x><C-o><Esc>:startinsert!<CR><C-O>?</<CR>
@@ -218,7 +192,7 @@ if has("autocmd")
         inoremap <buffer> ><CR> ></<C-x><C-o><Esc>:startinsert!<CR><C-O>?</<CR><CR><Tab><CR><Up><C-O>$
         :noh " need to find a way to turn off highlighting
     endfunction
-    autocmd BufRead,BufNewFile *.html,*.js,*.xml call s:CompleteTags() 
+    " autocmd BufRead,BufNewFile *.html,*.js,*.xml call s:CompleteTags() 
     " update what is displayed on tmux status bar
     autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
 endif
@@ -287,3 +261,10 @@ set clipboard=unnamedplus
 
 " remove status bar at bottom
 set laststatus=0
+
+" make undo history permanent
+set undofile
+set undodir=~/.vim/undodir
+
+" autosave
+autocmd TextChanged, TextChangedI <buffer> silent write
