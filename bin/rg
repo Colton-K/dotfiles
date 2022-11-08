@@ -1,0 +1,1 @@
+ripgrep-13.0.0-x86_64-unknown-linux-musl/rg
