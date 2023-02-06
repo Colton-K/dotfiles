@@ -9,7 +9,7 @@
         pr = pull --rebase
         prrs = pull --rebase --recurse-submodules
         di = diff
-        st = status
+        st = status -s
         co = checkout
         fpa = fetch --prune --all
         logs = log --topo-order --decorate --stat
@@ -17,6 +17,9 @@
         grapha = log --graph --decorate --abbrev-commit --pretty=oneline --all
         dw = diff --word-diff
         cloner = clone --recursive
+        ca = !git add -A && git commit -av
+[apply]
+    whitespace = fix
 [pull]
 	rebase = false
 [credential]

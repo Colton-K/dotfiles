@@ -4,33 +4,11 @@
 DIR=$(echo $PWD)
 OLDCONFIGDIR="$HOME/.olddotfiles"
 FILES="profile bashrc gitconfig vim vimrc zshrc Xresources tmux.conf"
-ZSHTHEMES="ckammes"
 
-# check your privilidge
-if [ "$1" == "root" ]; then
-    which wget 2> /dev/null
-    if ! test $? -eq 0; then
-        echo "Install wget because wget doesn't exist in $WGET"
-        sudo apt-get -y install wget
-    fi
-
-    which git 2> /dev/null
-    if ! test $? -eq 0; then
-        echo "Install git because git doesn't exist in $GIT"
-        sudo apt-get -y install git
-    fi
-
-    # glances
-    which glances 2> /dev/null
-    if test $? -gt 0; then
-        echo "---------------"
-        echo "Install glances"
-        sudo apt-get install -y glances
-        # sudo dnf install glances
-    fi
-
-    sudo apt-get install -y ripgrep # for vim file searching
-    # sudo dnf install ripgrep
+# TODO: install git
+sudo apt-get install git 
+if test $? -gt 0; then
+    echo "Failed to install git"
 fi
 
 # nodejs server needed for coc.nvim vim plugin - installs to $HOME/.local to avoid needing root privilidges

@@ -16,9 +16,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
-" indent line
-" Plug 'Yggdroot/indentLine'
-
 " flex syntax 
 Plug 'justinmk/vim-syntax-extra'
 
@@ -27,9 +24,6 @@ Plug 'tpope/vim-surround'
 
 " match beginning and end of more tags with %
 Plug 'andymass/vim-matchup'
-
-" automatically show vim's complete menu
-" Plug 'vim-scripts/AutoComplPop'
 
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
@@ -57,7 +51,6 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
 
 
 " commenting plugin
@@ -237,38 +230,6 @@ set ignorecase
 
 " show incremental search results
 " set incsearch
-
-" use netrw for file manager - I don't because it doesn't find your directory
-" automatically
-" set autochdir
-" let g:NetrwIsOpen=0
-
-" function! ToggleNetrw()
-"     if g:NetrwIsOpen
-"         let i = bufnr("$")
-"         while (i >= 1)
-"             if (getbufvar(i, "&filetype") == "netrw")
-"                 silent exe "bwipeout " . i 
-"             endif
-"             let i-=1
-"         endwhile
-"         let g:NetrwIsOpen=0
-"     else
-"         let g:NetrwIsOpen=1
-"         silent Lexplore
-"     endif
-" endfunction
-
-" nnoremap <C-n> :call ToggleNetrw() <CR>
-" let g:netrw_liststyle = 0 " for thin view
-" let g:netrw_banner = 0 " hide banner 
-" let g:netrw_winsize = 25 " set width to 25% of window size
-
-" make pairs autocomplete instead of using a plugin
-" :inoremap ( ()<Esc>:let leavechar=")"<CR>i
-" :inoremap [ []<Esc>:let leavechar="]"<CR>i
-" :inoremap { {}<Esc>:let leavechar="}"<CR>i
-" :inoremap " ""<Esc>:let leavechar="""<CR>i
 
 
 " make copy paste to/from system work
