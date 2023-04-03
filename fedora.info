@@ -1,2 +1,2 @@
-xterm +sb
+xerm +sb
 update-crypto-policies --set LEGACY

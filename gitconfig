@@ -1,6 +1,6 @@
 [user]
 	email = ckammes@nd.edu
-	name = Colton Kammes
+	name = ckammes@nd.edu
 
 [tool]
     diff = vimdiff
@@ -18,9 +18,10 @@
         dw = diff --word-diff
         cloner = clone --recursive
         ca = !git add -A && git commit -av
+
 [apply]
     whitespace = fix
 [pull]
 	rebase = false
 [credential]
-	helper = store
+	helper = cache
