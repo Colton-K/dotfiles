@@ -170,6 +170,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt>
 
 . /home/colton/work/dotfiles/bin/z
 
+export PATH="$PATH:/home/colton/bin"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
 export PATH="$PATH:/home/colton/work/dotfiles/bin"
 

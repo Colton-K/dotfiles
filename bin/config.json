@@ -1,0 +1,12 @@
+{
+    "key": "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",
+    "api_base": "",
+    "model": "gpt-3.5-turbo",
+    "stream": true,
+    "stream_render": true,
+    "response": true,
+    "proxy": "",
+    "prompt": [
+        { "role": "system", "content": "If your response contains code, show with syntax highlight, for example ```js\ncode\n```" }
+    ]
+}

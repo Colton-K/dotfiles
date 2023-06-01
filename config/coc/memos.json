@@ -78,6 +78,84 @@
         "type": "Conda",
         "envPath": "/home/colton/.conda/envs/tf",
         "envName": "tf"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/sky/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.16-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.16-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/sky",
+        "fileHash": "ec32fd004f0f5ac534e31074fde77ce1d1b5caac40d84f0330f77b0511a0c29950c29a813b381e9bf439db395b51e394ce9a4fb3234223a0770e4080b459b4c0",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/colton/.conda/envs/sky",
+        "envName": "sky"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/test/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.2-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.2-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/test",
+        "fileHash": "741b27d425639348250a35d07bd768b3665bfce2418b9cd530bcf3b31dfc94078aa270a8e9518eb57f557e0ca1699e857cc0f9e9872e1eef9f6de5fb8229b459",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/colton/.conda/envs/test",
+        "envName": "test"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/ldm/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/ldm",
+        "fileHash": "59db38206dea7ae5ea499454e75b24a465c4bfa2c6be094390c8f99c018f525d91f4568a0f0696fdff366395936fe8037f9dae206a265c84d1654fc150c4dbe1",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/colton/.conda/envs/ldm",
+        "envName": "ldm"
       }
     ],
     "INTERPRETERS_CACHE_v3_VirtualEnvService": [],
@@ -136,6 +214,84 @@
       },
       {
         "architecture": 3,
+        "path": "/home/colton/.conda/envs/ldm/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/ldm",
+        "fileHash": "59db38206dea7ae5ea499454e75b24a465c4bfa2c6be094390c8f99c018f525d91f4568a0f0696fdff366395936fe8037f9dae206a265c84d1654fc150c4dbe1",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/colton/.conda/envs/ldm",
+        "envName": "ldm"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/sky/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.16-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.16-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/sky",
+        "fileHash": "ec32fd004f0f5ac534e31074fde77ce1d1b5caac40d84f0330f77b0511a0c29950c29a813b381e9bf439db395b51e394ce9a4fb3234223a0770e4080b459b4c0",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/colton/.conda/envs/sky",
+        "envName": "sky"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/test/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.2-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.2-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/test",
+        "fileHash": "741b27d425639348250a35d07bd768b3665bfce2418b9cd530bcf3b31dfc94078aa270a8e9518eb57f557e0ca1699e857cc0f9e9872e1eef9f6de5fb8229b459",
+        "companyDisplayName": "Anaconda, Inc.",
+        "type": "Conda",
+        "envPath": "/home/colton/.conda/envs/test",
+        "envName": "test"
+      },
+      {
+        "architecture": 3,
         "path": "/home/colton/.conda/envs/tf/bin/python",
         "version": {
           "options": {
@@ -169,18 +325,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
         "companyDisplayName": "Anaconda, Inc.",
         "type": "Conda",
         "envPath": "/usr",
@@ -195,18 +351,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
         "companyDisplayName": "Anaconda, Inc.",
         "type": "Conda",
         "envPath": "/usr",
@@ -223,20 +379,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "9545a723c24986b18e9b0d6e53990744c2a14deda4ca3152ac0a6c40d310ee79300d752bc7decedebb401517ee96e1e1781a4af81763b3c51a784779da629b96"
+        "fileHash": "9cfabb3dc78fb5a1bf65a29e572c2b4fe570844b8ae45ae85aeb8b3a2531a9e84425a82a829b98c254e72abe84c1685aa01ec6e1301ab80a5a4fd8902dffaae1"
       },
-      "expiry": 1679693791447
+      "expiry": 1685716139524
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -248,20 +404,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "91bf02871d69c928bedf4bc576b177e81aa9ebdd1fb61a94eee53f913d9f0ac0f81ed240612b87f25c9fabedc5d3ddb3445f2531069779da8c4aa487613f622b"
+        "fileHash": "f7e414b208e70b5ad2c1f2f4f0f3035778589deb8938668918a2d29eeb7adc560d4f64335f13ce9bbb8b062e4b9057d0ac1aa72717ed9ae2e7e4af41ca91fab5"
       },
-      "expiry": 1679693791441
+      "expiry": 1685716139613
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -273,20 +429,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d"
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49"
       },
-      "expiry": 1679693791461
+      "expiry": 1685716139606
     },
     "/bin/python3.v3": {
       "data": {
@@ -298,20 +454,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "91bf02871d69c928bedf4bc576b177e81aa9ebdd1fb61a94eee53f913d9f0ac0f81ed240612b87f25c9fabedc5d3ddb3445f2531069779da8c4aa487613f622b"
+        "fileHash": "f7e414b208e70b5ad2c1f2f4f0f3035778589deb8938668918a2d29eeb7adc560d4f64335f13ce9bbb8b062e4b9057d0ac1aa72717ed9ae2e7e4af41ca91fab5"
       },
-      "expiry": 1679693791445
+      "expiry": 1685716139623
     },
     "/bin/python3.11.v3": {
       "data": {
@@ -323,20 +479,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "9545a723c24986b18e9b0d6e53990744c2a14deda4ca3152ac0a6c40d310ee79300d752bc7decedebb401517ee96e1e1781a4af81763b3c51a784779da629b96"
+        "fileHash": "9cfabb3dc78fb5a1bf65a29e572c2b4fe570844b8ae45ae85aeb8b3a2531a9e84425a82a829b98c254e72abe84c1685aa01ec6e1301ab80a5a4fd8902dffaae1"
       },
-      "expiry": 1679693791443
+      "expiry": 1685716139620
     },
     "/bin/python.v3": {
       "data": {
@@ -348,20 +504,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d"
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49"
       },
-      "expiry": 1679693791397
+      "expiry": 1685716139497
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
       {
@@ -373,18 +529,64 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "db46ae84b6ccc801aef55916db0780c84fd730f2955e1ca2223e86b91f62aaf1bfabfc241f581996ffedb863087ca8fdb67890fdbd765e0d71e188a6d873f592",
         "type": "Unknown"
       },
       {
@@ -396,18 +598,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "91bf02871d69c928bedf4bc576b177e81aa9ebdd1fb61a94eee53f913d9f0ac0f81ed240612b87f25c9fabedc5d3ddb3445f2531069779da8c4aa487613f622b",
+        "fileHash": "f7e414b208e70b5ad2c1f2f4f0f3035778589deb8938668918a2d29eeb7adc560d4f64335f13ce9bbb8b062e4b9057d0ac1aa72717ed9ae2e7e4af41ca91fab5",
         "type": "Unknown"
       },
       {
@@ -419,18 +621,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "9545a723c24986b18e9b0d6e53990744c2a14deda4ca3152ac0a6c40d310ee79300d752bc7decedebb401517ee96e1e1781a4af81763b3c51a784779da629b96",
+        "fileHash": "9cfabb3dc78fb5a1bf65a29e572c2b4fe570844b8ae45ae85aeb8b3a2531a9e84425a82a829b98c254e72abe84c1685aa01ec6e1301ab80a5a4fd8902dffaae1",
         "type": "Unknown"
       },
       {
@@ -442,18 +644,64 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "db46ae84b6ccc801aef55916db0780c84fd730f2955e1ca2223e86b91f62aaf1bfabfc241f581996ffedb863087ca8fdb67890fdbd765e0d71e188a6d873f592",
         "type": "Unknown"
       },
       {
@@ -465,18 +713,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "91bf02871d69c928bedf4bc576b177e81aa9ebdd1fb61a94eee53f913d9f0ac0f81ed240612b87f25c9fabedc5d3ddb3445f2531069779da8c4aa487613f622b",
+        "fileHash": "f7e414b208e70b5ad2c1f2f4f0f3035778589deb8938668918a2d29eeb7adc560d4f64335f13ce9bbb8b062e4b9057d0ac1aa72717ed9ae2e7e4af41ca91fab5",
         "type": "Unknown"
       },
       {
@@ -488,18 +736,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "9545a723c24986b18e9b0d6e53990744c2a14deda4ca3152ac0a6c40d310ee79300d752bc7decedebb401517ee96e1e1781a4af81763b3c51a784779da629b96",
+        "fileHash": "9cfabb3dc78fb5a1bf65a29e572c2b4fe570844b8ae45ae85aeb8b3a2531a9e84425a82a829b98c254e72abe84c1685aa01ec6e1301ab80a5a4fd8902dffaae1",
         "type": "Unknown"
       },
       {
@@ -511,18 +759,64 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "db46ae84b6ccc801aef55916db0780c84fd730f2955e1ca2223e86b91f62aaf1bfabfc241f581996ffedb863087ca8fdb67890fdbd765e0d71e188a6d873f592",
         "type": "Unknown"
       },
       {
@@ -534,18 +828,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "91bf02871d69c928bedf4bc576b177e81aa9ebdd1fb61a94eee53f913d9f0ac0f81ed240612b87f25c9fabedc5d3ddb3445f2531069779da8c4aa487613f622b",
+        "fileHash": "f7e414b208e70b5ad2c1f2f4f0f3035778589deb8938668918a2d29eeb7adc560d4f64335f13ce9bbb8b062e4b9057d0ac1aa72717ed9ae2e7e4af41ca91fab5",
         "type": "Unknown"
       },
       {
@@ -557,18 +851,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "9545a723c24986b18e9b0d6e53990744c2a14deda4ca3152ac0a6c40d310ee79300d752bc7decedebb401517ee96e1e1781a4af81763b3c51a784779da629b96",
+        "fileHash": "9cfabb3dc78fb5a1bf65a29e572c2b4fe570844b8ae45ae85aeb8b3a2531a9e84425a82a829b98c254e72abe84c1685aa01ec6e1301ab80a5a4fd8902dffaae1",
         "type": "Unknown"
       }
     ],
@@ -582,18 +876,41 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "91bf02871d69c928bedf4bc576b177e81aa9ebdd1fb61a94eee53f913d9f0ac0f81ed240612b87f25c9fabedc5d3ddb3445f2531069779da8c4aa487613f622b",
+        "fileHash": "f7e414b208e70b5ad2c1f2f4f0f3035778589deb8938668918a2d29eeb7adc560d4f64335f13ce9bbb8b062e4b9057d0ac1aa72717ed9ae2e7e4af41ca91fab5",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb",
         "type": "Unknown"
       },
       {
@@ -605,18 +922,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
         "type": "Unknown"
       },
       {
@@ -628,18 +945,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.11.2-final",
+          "raw": "3.11.3-final",
           "major": 3,
           "minor": 11,
-          "patch": 2,
+          "patch": 3,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.11.2-final"
+          "version": "3.11.3-final"
         },
         "sysPrefix": "/usr",
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
         "type": "Unknown"
       }
     ],
@@ -652,18 +969,18 @@
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.11.2-final",
+        "raw": "3.11.3-final",
         "major": 3,
         "minor": 11,
-        "patch": 2,
+        "patch": 3,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.11.2-final"
+        "version": "3.11.3-final"
       },
       "sysPrefix": "/usr",
-      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
       "type": "Unknown",
       "cachedEntry": true
     },
@@ -677,34 +994,34 @@
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.11.2-final",
+        "raw": "3.11.3-final",
         "major": 3,
         "minor": 11,
-        "patch": 2,
+        "patch": 3,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.11.2-final"
+        "version": "3.11.3-final"
       },
       "sysPrefix": "/usr",
-      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "fileHash": "01086f590696f0f5271711552ec1f9c73fc8f6620e93bda631139fc77572495fa0af2c1e3010e921b64f8ad90417e58e0baff3d122cf5e299fa14b07f91b3625",
       "type": "Unknown",
-      "displayName": "Python 3.11.2 64-bit"
+      "displayName": "Python 3.11.3 64-bit"
     },
     "/usr/bin/python.interpreter.displayName.v7": {
       "data": {
-        "displayName": "Python 3.11.2 64-bit",
-        "hash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d-ec14ddf399fbe609cf668bcca16e2ddf"
+        "displayName": "Python 3.11.3 64-bit",
+        "hash": "01086f590696f0f5271711552ec1f9c73fc8f6620e93bda631139fc77572495fa0af2c1e3010e921b64f8ad90417e58e0baff3d122cf5e299fa14b07f91b3625-ad11c0552f1f4c2bd833e0fa2f7c7ca5"
       },
-      "expiry": 1678791733311
+      "expiry": 1685209333145
     },
     "/bin/python.interpreter.displayName.v7": {
       "data": {
-        "displayName": "Python 3.11.2 64-bit",
-        "hash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d-4b0873536e00f021eb932e3ae8389d31"
+        "displayName": "Python 3.11.3 64-bit",
+        "hash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49-d2f4acd1f48e14ea034e68be5e08416c"
       },
-      "expiry": 1679693791555
+      "expiry": 1685716139841
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
@@ -715,25 +1032,25 @@
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.11.2-final",
+        "raw": "3.11.3-final",
         "major": 3,
         "minor": 11,
-        "patch": 2,
+        "patch": 3,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.11.2-final"
+        "version": "3.11.3-final"
       },
       "sysPrefix": "/usr",
-      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
       "type": "Unknown",
       "cachedEntry": true,
-      "displayName": "Python 3.11.2 64-bit"
+      "displayName": "Python 3.11.3 64-bit"
     },
     "/usr/bin/python.interpreter.Details.v7": {
       "data": {
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "01086f590696f0f5271711552ec1f9c73fc8f6620e93bda631139fc77572495fa0af2c1e3010e921b64f8ad90417e58e0baff3d122cf5e299fa14b07f91b3625",
         "info": {
           "architecture": 3,
           "path": "/usr/bin/python",
@@ -743,27 +1060,27 @@
               "includePrerelease": false
             },
             "loose": false,
-            "raw": "3.11.2-final",
+            "raw": "3.11.3-final",
             "major": 3,
             "minor": 11,
-            "patch": 2,
+            "patch": 3,
             "prerelease": [
               "final"
             ],
             "build": [],
-            "version": "3.11.2-final"
+            "version": "3.11.3-final"
           },
           "sysPrefix": "/usr",
-          "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+          "fileHash": "01086f590696f0f5271711552ec1f9c73fc8f6620e93bda631139fc77572495fa0af2c1e3010e921b64f8ad90417e58e0baff3d122cf5e299fa14b07f91b3625",
           "type": "Unknown",
-          "displayName": "Python 3.11.2 64-bit"
+          "displayName": "Python 3.11.3 64-bit"
         }
       },
-      "expiry": 1678791733337
+      "expiry": 1685209333562
     },
     "/bin/python.interpreter.Details.v7": {
       "data": {
-        "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+        "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
         "info": {
           "architecture": 3,
           "path": "/bin/python",
@@ -773,25 +1090,25 @@
               "includePrerelease": false
             },
             "loose": false,
-            "raw": "3.11.2-final",
+            "raw": "3.11.3-final",
             "major": 3,
             "minor": 11,
-            "patch": 2,
+            "patch": 3,
             "prerelease": [
               "final"
             ],
             "build": [],
-            "version": "3.11.2-final"
+            "version": "3.11.3-final"
           },
           "sysPrefix": "/usr",
-          "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+          "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
           "type": "Unknown",
           "cachedEntry": true,
-          "displayName": "Python 3.11.2 64-bit",
+          "displayName": "Python 3.11.3 64-bit",
           "__store": true
         }
       },
-      "expiry": 1679693791469
+      "expiry": 1685716139666
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
@@ -802,21 +1119,20 @@
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.11.2-final",
+        "raw": "3.11.3-final",
         "major": 3,
         "minor": 11,
-        "patch": 2,
+        "patch": 3,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.11.2-final"
+        "version": "3.11.3-final"
       },
       "sysPrefix": "/usr",
-      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "fileHash": "653ec3b45d3614e149ddd795b12b16221456b8593eac09b3d0cd3ee5f37c2124342b4bd3e46da3ea8be636826b6379370116ab83e8558142cd6cd4b92d0acd49",
       "type": "Unknown",
-      "cachedEntry": true,
-      "displayName": "Python 3.11.2 64-bit"
+      "displayName": "Python 3.11.3 64-bit"
     },
     "ProposeLSBanner": false,
     "/home/colton/.conda/envs/gym/bin/python.v3": {
@@ -842,7 +1158,7 @@
         "sysPrefix": "/home/colton/.conda/envs/gym",
         "fileHash": "d8b4ea6000e7bb51a9c42ee6ce87dfea955d9e3bd5597bc8ca7043da0bed2f6d38f3ab96cb40940ccb969f2dc43a2956982b0195ce16230fa7b0044eb6767d23"
       },
-      "expiry": 1679693791565
+      "expiry": 1685716139833
     },
     "CONDA_ENVIRONMENTS": {
       "data": [
@@ -855,12 +1171,20 @@
           "path": "/home/colton/.conda/envs/gym-retro-gpu"
         },
         {
-          "name": "tf",
-          "path": "/home/colton/.conda/envs/tf"
+          "name": "ldm",
+          "path": "/home/colton/.conda/envs/ldm"
         },
         {
-          "name": "conda",
-          "path": "/home/colton/bin/conda"
+          "name": "sky",
+          "path": "/home/colton/.conda/envs/sky"
+        },
+        {
+          "name": "test",
+          "path": "/home/colton/.conda/envs/test"
+        },
+        {
+          "name": "tf",
+          "path": "/home/colton/.conda/envs/tf"
         },
         {
           "name": "base",
@@ -873,7 +1197,7 @@
         "displayName": "Python 3.8.16 64-bit ('gym': conda)",
         "hash": "d8b4ea6000e7bb51a9c42ee6ce87dfea955d9e3bd5597bc8ca7043da0bed2f6d38f3ab96cb40940ccb969f2dc43a2956982b0195ce16230fa7b0044eb6767d23-5b8857d5126109ccb037c09640b724e2"
       },
-      "expiry": 1678791733435
+      "expiry": 1682106063980
     },
     "/home/colton/.conda/envs/gym/bin/python.interpreter.Details.v7": {
       "data": {
@@ -906,7 +1230,7 @@
           "displayName": "Python 3.8.16 64-bit ('gym': conda)"
         }
       },
-      "expiry": 1678791733449
+      "expiry": 1682106064033
     },
     "/home/colton/.conda/envs/gym-retro-gpu/bin/python.v3": {
       "data": {
@@ -931,14 +1255,14 @@
         "sysPrefix": "/home/colton/.conda/envs/gym-retro-gpu",
         "fileHash": "cc369cb9037782faad9eeba8f223f7ed2adcd6a04e883f873731712bf5e3b3f51b7cff76c10c42623fd07c788e2fff5b5931c0be01befe37ccd85da6bfa37a40"
       },
-      "expiry": 1679693791568
+      "expiry": 1685716139799
     },
     "/home/colton/.conda/envs/gym-retro-gpu/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.6.13 64-bit ('gym-retro-gpu': conda)",
         "hash": "cc369cb9037782faad9eeba8f223f7ed2adcd6a04e883f873731712bf5e3b3f51b7cff76c10c42623fd07c788e2fff5b5931c0be01befe37ccd85da6bfa37a40-2056044660d64d07162235594074f8e8"
       },
-      "expiry": 1678791733437
+      "expiry": 1682106063985
     },
     "/home/colton/.conda/envs/gym-retro-gpu/bin/python.interpreter.Details.v7": {
       "data": {
@@ -971,7 +1295,7 @@
           "displayName": "Python 3.6.13 64-bit ('gym-retro-gpu': conda)"
         }
       },
-      "expiry": 1678791733455
+      "expiry": 1682106064052
     },
     "/home/colton/.conda/envs/tf/bin/python.v3": {
       "data": {
@@ -996,7 +1320,567 @@
         "sysPrefix": "/home/colton/.conda/envs/tf",
         "fileHash": "a75344ecc0ca83c886615e6903cc67e1b4721f7758d70244ae5ec7ce22b5ef98b95c66cfe2e7274ac254c7e202a2dd98d6cf071b19bcd879d6f742e88bce083c"
       },
-      "expiry": 1679693791575
+      "expiry": 1685716139795
+    },
+    "/home/colton/.conda/envs/ldm/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/ldm/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/ldm",
+        "fileHash": "59db38206dea7ae5ea499454e75b24a465c4bfa2c6be094390c8f99c018f525d91f4568a0f0696fdff366395936fe8037f9dae206a265c84d1654fc150c4dbe1"
+      },
+      "expiry": 1685716139862
+    },
+    "/home/colton/.conda/envs/test/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/test/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.11.2-final",
+          "major": 3,
+          "minor": 11,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.11.2-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/test",
+        "fileHash": "741b27d425639348250a35d07bd768b3665bfce2418b9cd530bcf3b31dfc94078aa270a8e9518eb57f557e0ca1699e857cc0f9e9872e1eef9f6de5fb8229b459"
+      },
+      "expiry": 1685716139829
+    },
+    "/home/colton/.conda/envs/sky/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/sky/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.7.16-final",
+          "major": 3,
+          "minor": 7,
+          "patch": 16,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.7.16-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/sky",
+        "fileHash": "ec32fd004f0f5ac534e31074fde77ce1d1b5caac40d84f0330f77b0511a0c29950c29a813b381e9bf439db395b51e394ce9a4fb3234223a0770e4080b459b4c0"
+      },
+      "expiry": 1685716139824
+    },
+    "/home/colton/.conda/envs/ldm/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/ldm/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/ldm",
+        "fileHash": "8de010c01f7225f86e141e8f85f9d2846ae6fa3882b0c1077708baf1f576af084c671a9f13bb1fa00955e8cd5b6407cf36e9b45d5922e86dfe0edc20d485522e"
+      },
+      "expiry": 1681785916930
+    },
+    "/home/colton/.conda/envs/ldm/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/colton/.conda/envs/ldm/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/.conda/envs/ldm",
+        "fileHash": "59db38206dea7ae5ea499454e75b24a465c4bfa2c6be094390c8f99c018f525d91f4568a0f0696fdff366395936fe8037f9dae206a265c84d1654fc150c4dbe1"
+      },
+      "expiry": 1681785916967
+    },
+    "/home/colton/work/stable-diffusion-webui/venv/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/colton/work/stable-diffusion-webui/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/work/stable-diffusion-webui/venv",
+        "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1"
+      },
+      "expiry": 1681102726499
+    },
+    "/home/colton/work/stable-diffusion-webui/venv/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/colton/work/stable-diffusion-webui/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/work/stable-diffusion-webui/venv",
+        "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1"
+      },
+      "expiry": 1681102726501
+    },
+    "/home/colton/work/stable-diffusion-webui/venv/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit ('venv': venv)",
+        "hash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1-7bbabbf4a304c6b30e92d8cf01c5a1fb"
+      },
+      "expiry": 1681102726593
+    },
+    "/home/colton/work/stable-diffusion-webui/venv/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1",
+        "info": {
+          "architecture": 3,
+          "path": "/home/colton/work/stable-diffusion-webui/venv/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.5-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 5,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.5-final"
+          },
+          "sysPrefix": "/home/colton/work/stable-diffusion-webui/venv",
+          "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1",
+          "envName": "venv",
+          "type": "Venv",
+          "displayName": "Python 3.8.5 64-bit ('venv': venv)"
+        }
+      },
+      "expiry": 1681102726650
+    },
+    "/home/colton/work/stable-diffusion-webui/venv/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1"
+      },
+      "expiry": 1681102726914
+    },
+    "/home/colton/work/stable-diffusion-webui/venv/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit ('venv': venv)",
+        "hash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1-d49fd4d4e075d28efe68945fac16406a"
+      },
+      "expiry": 1681102727149
+    },
+    "/bin/python2.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "db46ae84b6ccc801aef55916db0780c84fd730f2955e1ca2223e86b91f62aaf1bfabfc241f581996ffedb863087ca8fdb67890fdbd765e0d71e188a6d873f592"
+      },
+      "expiry": 1685716139489
+    },
+    "/bin/python2.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb"
+      },
+      "expiry": 1685716139494
+    },
+    "/usr/bin/python2.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "db46ae84b6ccc801aef55916db0780c84fd730f2955e1ca2223e86b91f62aaf1bfabfc241f581996ffedb863087ca8fdb67890fdbd765e0d71e188a6d873f592"
+      },
+      "expiry": 1685716139521
+    },
+    "/usr/bin/python2.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.18-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 18,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.18-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb"
+      },
+      "expiry": 1685716139609
+    },
+    "/usr/bin/python2.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.18 64-bit",
+        "hash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb-509c9ca61b53e8fe0393651dad5a5b54"
+      },
+      "expiry": 1685457215369
+    },
+    "/bin/python2.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.18 64-bit",
+        "hash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb-03c07551815fab88c21842282151b381"
+      },
+      "expiry": 1685457215380
+    },
+    "/usr/bin/python2.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/bin/python2",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.18-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 18,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.18-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb",
+          "type": "Unknown",
+          "displayName": "Python 2.7.18 64-bit"
+        }
+      },
+      "expiry": 1685457215471
+    },
+    "/bin/python2.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb",
+        "info": {
+          "architecture": 3,
+          "path": "/bin/python2",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.18-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 18,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.18-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "429dde67da910bb022c0b9c5701756c48bd795da47ab6562a9a9354c7df3106e5b546a245f16b7a2a443744d25aef9fc4c0d054890a1c363178ffc2a9c7816bb",
+          "type": "Unknown",
+          "displayName": "Python 2.7.18 64-bit"
+        }
+      },
+      "expiry": 1685457215504
+    },
+    "/home/colton/.conda/envs/ldm/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit ('ldm': conda)",
+        "hash": "59db38206dea7ae5ea499454e75b24a465c4bfa2c6be094390c8f99c018f525d91f4568a0f0696fdff366395936fe8037f9dae206a265c84d1654fc150c4dbe1-4a7df1240d931356be3dcff8d6694fef"
+      },
+      "expiry": 1682106063990
+    },
+    "/home/colton/.conda/envs/sky/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.7.16 64-bit ('sky': conda)",
+        "hash": "ec32fd004f0f5ac534e31074fde77ce1d1b5caac40d84f0330f77b0511a0c29950c29a813b381e9bf439db395b51e394ce9a4fb3234223a0770e4080b459b4c0-adbcb2f7ec95074e0a83af080e5a880b"
+      },
+      "expiry": 1682106063994
+    },
+    "/home/colton/.conda/envs/test/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.11.2 64-bit ('test': conda)",
+        "hash": "741b27d425639348250a35d07bd768b3665bfce2418b9cd530bcf3b31dfc94078aa270a8e9518eb57f557e0ca1699e857cc0f9e9872e1eef9f6de5fb8229b459-c7b0f26fec6e6308bb27910309c50440"
+      },
+      "expiry": 1682106063998
+    },
+    "/home/colton/.conda/envs/tf/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.16 64-bit ('tf': conda)",
+        "hash": "a75344ecc0ca83c886615e6903cc67e1b4721f7758d70244ae5ec7ce22b5ef98b95c66cfe2e7274ac254c7e202a2dd98d6cf071b19bcd879d6f742e88bce083c-06993d4f63c72cff5308dad4cf1b91d1"
+      },
+      "expiry": 1682106064003
+    },
+    "/home/colton/.conda/envs/ldm/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "59db38206dea7ae5ea499454e75b24a465c4bfa2c6be094390c8f99c018f525d91f4568a0f0696fdff366395936fe8037f9dae206a265c84d1654fc150c4dbe1",
+        "info": {
+          "architecture": 3,
+          "path": "/home/colton/.conda/envs/ldm/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.5-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 5,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.5-final"
+          },
+          "sysPrefix": "/home/colton/.conda/envs/ldm",
+          "fileHash": "59db38206dea7ae5ea499454e75b24a465c4bfa2c6be094390c8f99c018f525d91f4568a0f0696fdff366395936fe8037f9dae206a265c84d1654fc150c4dbe1",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/home/colton/.conda/envs/ldm",
+          "envName": "ldm",
+          "displayName": "Python 3.8.5 64-bit ('ldm': conda)"
+        }
+      },
+      "expiry": 1682106064070
+    },
+    "/home/colton/.conda/envs/sky/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "ec32fd004f0f5ac534e31074fde77ce1d1b5caac40d84f0330f77b0511a0c29950c29a813b381e9bf439db395b51e394ce9a4fb3234223a0770e4080b459b4c0",
+        "info": {
+          "architecture": 3,
+          "path": "/home/colton/.conda/envs/sky/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.7.16-final",
+            "major": 3,
+            "minor": 7,
+            "patch": 16,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.7.16-final"
+          },
+          "sysPrefix": "/home/colton/.conda/envs/sky",
+          "fileHash": "ec32fd004f0f5ac534e31074fde77ce1d1b5caac40d84f0330f77b0511a0c29950c29a813b381e9bf439db395b51e394ce9a4fb3234223a0770e4080b459b4c0",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/home/colton/.conda/envs/sky",
+          "envName": "sky",
+          "displayName": "Python 3.7.16 64-bit ('sky': conda)"
+        }
+      },
+      "expiry": 1682106064087
+    },
+    "/home/colton/.conda/envs/test/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "741b27d425639348250a35d07bd768b3665bfce2418b9cd530bcf3b31dfc94078aa270a8e9518eb57f557e0ca1699e857cc0f9e9872e1eef9f6de5fb8229b459",
+        "info": {
+          "architecture": 3,
+          "path": "/home/colton/.conda/envs/test/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.11.2-final",
+            "major": 3,
+            "minor": 11,
+            "patch": 2,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.11.2-final"
+          },
+          "sysPrefix": "/home/colton/.conda/envs/test",
+          "fileHash": "741b27d425639348250a35d07bd768b3665bfce2418b9cd530bcf3b31dfc94078aa270a8e9518eb57f557e0ca1699e857cc0f9e9872e1eef9f6de5fb8229b459",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/home/colton/.conda/envs/test",
+          "envName": "test",
+          "displayName": "Python 3.11.2 64-bit ('test': conda)"
+        }
+      },
+      "expiry": 1682106064099
+    },
+    "/home/colton/.conda/envs/tf/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "a75344ecc0ca83c886615e6903cc67e1b4721f7758d70244ae5ec7ce22b5ef98b95c66cfe2e7274ac254c7e202a2dd98d6cf071b19bcd879d6f742e88bce083c",
+        "info": {
+          "architecture": 3,
+          "path": "/home/colton/.conda/envs/tf/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.9.16-final",
+            "major": 3,
+            "minor": 9,
+            "patch": 16,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.9.16-final"
+          },
+          "sysPrefix": "/home/colton/.conda/envs/tf",
+          "fileHash": "a75344ecc0ca83c886615e6903cc67e1b4721f7758d70244ae5ec7ce22b5ef98b95c66cfe2e7274ac254c7e202a2dd98d6cf071b19bcd879d6f742e88bce083c",
+          "companyDisplayName": "Anaconda, Inc.",
+          "type": "Conda",
+          "envPath": "/home/colton/.conda/envs/tf",
+          "envName": "tf",
+          "displayName": "Python 3.9.16 64-bit ('tf': conda)"
+        }
+      },
+      "expiry": 1682106064110
     }
   },
   "coc-python|/home/colton/work/scratch": {
@@ -1060,5 +1944,419 @@
   "coc-python|/home/colton": {
     "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
     "INTERPRETERS_CACHE_v3_PipEnvService": []
+  },
+  "coc-python|/home/colton/work/stable-diffusion": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:d02c8a0cff746120ae35a1db9016e0a1": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:d02c8a0cff746120ae35a1db9016e0a1": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/stable-diffusion": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.2-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.2-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "type": "Unknown",
+      "displayName": "Python 3.11.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-json|global": {
+    "json-schema-cache": {
+      "https://json.schemastore.org/config.json": {
+        "etag": "\"bcd1f6fd316ad81:0\"",
+        "fileName": "ee050b74d016c5f06e4024d2dce36b54.schema.json",
+        "updateTime": 1682397170561
+      }
+    }
+  },
+  "coc-python|/home/colton/work/gptcli": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:188145ea464319309294a5dbe1030376": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:188145ea464319309294a5dbe1030376": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/gptcli": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.2-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.2-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "type": "Unknown",
+      "displayName": "Python 3.11.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/colton/work/loopbackwave": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:0c6582f219edcfe79d101ea81641a09c": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:0c6582f219edcfe79d101ea81641a09c": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/loopbackwave": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.2-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.2-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "type": "Unknown",
+      "displayName": "Python 3.11.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/colton/work/stable-diffusion-webui": {
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:ebbbc37473a84a2d8b0871c76267e37f": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/colton/work/stable-diffusion-webui/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/work/stable-diffusion-webui/venv",
+        "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/colton/work/stable-diffusion-webui/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/work/stable-diffusion-webui/venv",
+        "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1",
+        "envName": "venv",
+        "type": "Venv"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:ebbbc37473a84a2d8b0871c76267e37f": [
+      {
+        "architecture": 3,
+        "path": "/home/colton/work/stable-diffusion-webui/venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/work/stable-diffusion-webui/venv",
+        "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1",
+        "envName": "venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/home/colton/work/stable-diffusion-webui/venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/home/colton/work/stable-diffusion-webui/venv",
+        "fileHash": "73db279855f6849b7a9982ff9aa34d881a10e808e8fbb1dda5e38514beee82e6af92867779e7c882dd6a3eacdf91258d9969edcf0d2d56bf2addd36dac3970f1",
+        "envName": "venv",
+        "type": "Venv"
+      }
+    ],
+    "SelectedPythonPath": "/home/colton/work/stable-diffusion-webui/venv/bin/python3"
+  },
+  "coc-python|/home/colton/work/inchworm": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:4ec7b6de8b208365770877e3dc3ce551": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:4ec7b6de8b208365770877e3dc3ce551": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/inchworm": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.2-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.2-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "type": "Unknown",
+      "displayName": "Python 3.11.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/colton/work/verminarchive": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:0f01100632c8e48305eed011b5eb4ea7": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:0f01100632c8e48305eed011b5eb4ea7": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/verminarchive": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.2-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.2-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "type": "Unknown",
+      "displayName": "Python 3.11.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/colton/work/dotfiles": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:73e2c2fd2e30c41add5df9d70df023f8": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:73e2c2fd2e30c41add5df9d70df023f8": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/dotfiles": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.2-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.2-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "b63b5dd7eca4e3a7a4385d1834ad70bf6b4d23d80af798bc1323171c060b0504d74eec83a66a2e6a9573b5bf5efabeb48a62816bdf456e58adacaaa6b6e9130d",
+      "type": "Unknown",
+      "displayName": "Python 3.11.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/colton/work": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:b8dda69d7cf4e906495e8836626a6653": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:b8dda69d7cf4e906495e8836626a6653": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "01086f590696f0f5271711552ec1f9c73fc8f6620e93bda631139fc77572495fa0af2c1e3010e921b64f8ad90417e58e0baff3d122cf5e299fa14b07f91b3625",
+      "type": "Unknown",
+      "displayName": "Python 3.11.3 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/colton/work/Day49-LinkedIn-Quick-Apply-Bot": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:59883b471f4652f87954db9962b263d6": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:59883b471f4652f87954db9962b263d6": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/Day49-LinkedIn-Quick-Apply-Bot": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "01086f590696f0f5271711552ec1f9c73fc8f6620e93bda631139fc77572495fa0af2c1e3010e921b64f8ad90417e58e0baff3d122cf5e299fa14b07f91b3625",
+      "type": "Unknown",
+      "displayName": "Python 3.11.3 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/colton/work/LinkedIn-Easy-Apply-Bot": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:fa33c638264ba1139214e43ddc4717a8": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:fa33c638264ba1139214e43ddc4717a8": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/LinkedIn-Easy-Apply-Bot": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "01086f590696f0f5271711552ec1f9c73fc8f6620e93bda631139fc77572495fa0af2c1e3010e921b64f8ad90417e58e0baff3d122cf5e299fa14b07f91b3625",
+      "type": "Unknown",
+      "displayName": "Python 3.11.3 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/colton/work/linkedin-apply-bot": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:76640f7e3153571c7ea7caf742af8a48": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:76640f7e3153571c7ea7caf742af8a48": [],
+    "autoSelectedWorkspacePythonInterpreter-/home/colton/work/linkedin-apply-bot": {
+      "architecture": 3,
+      "path": "/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.11.3-final",
+        "major": 3,
+        "minor": 11,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.11.3-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "01086f590696f0f5271711552ec1f9c73fc8f6620e93bda631139fc77572495fa0af2c1e3010e921b64f8ad90417e58e0baff3d122cf5e299fa14b07f91b3625",
+      "type": "Unknown",
+      "displayName": "Python 3.11.3 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
   }
 }

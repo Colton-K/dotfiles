@@ -16,9 +16,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 
-" motions
-Plug 'easymotion/vim-easymotion'
-
 " flex syntax 
 Plug 'justinmk/vim-syntax-extra'
 
@@ -244,6 +241,3 @@ set laststatus=0
 " make undo history permanent
 set undofile
 set undodir=~/.vim/undodir
-
-nnoremap <SPACE> <Nop>
-let mapleader=" "
