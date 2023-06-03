@@ -1,3 +1,5 @@
 vim/plugged/*
 vim/undodir/*
 docker/.env
+config/coc/*
+bin/config.json
