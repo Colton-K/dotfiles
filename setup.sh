@@ -1,23 +1,34 @@
-#!/bin/bash
+declare -A osInfo;
+osInfo[/etc/debian_version]="apt-get install -y"
+osInfo[/etc/alpine-release]="apk --update add"
+osInfo[/etc/centos-release]="yum install -y"
+osInfo[/etc/fedora-release]="dnf install -y"
+osInfo[/etc/amazon-linux-release]="dnf install -y"
+
+for f in ${!osInfo[@]}
+do
+    if [[ -f $f ]];then
+        package_manager=${osInfo[$f]}
+    fi
+done
+
+echo "Package manager command: $package_manager"
+
+packages="git htop"
+
+${package_manager} ${packages}
+
+if [ ${PWD/*\//} != "dotfiles" ]; then
+    git clone https://github.com/Colton-K/dotfiles.git
+    cd dotfiles
+    ./setup.sh
+    exit
+fi
 
 # set vars
 DIR=$(echo $PWD)
 OLDCONFIGDIR="$HOME/.olddotfiles"
 FILES="profile bashrc gitconfig vim vimrc zshrc Xresources tmux.conf"
-
-# TODO: install git
-sudo apt-get install git 
-if test $? -gt 0; then
-    echo "Failed to install git"
-fi
-
-# nodejs server needed for coc.nvim vim plugin - installs to $HOME/.local to avoid needing root privilidges
-which node 2> /dev/null
-if test $? -gt 0; then
-    echo "--------------"
-    echo "Install nodejs"
-    curl -sL install-node.now.sh/lts | bash -s -- --prefix=$HOME/.local
-fi
 
 # fuzzy finder - shouldn't need root to install it
 which fzf 2> /dev/null
@@ -28,11 +39,6 @@ if test $? -gt 0; then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
 fi
-
-# create symbolic links for $files
-echo "-----------------------------------"
-echo "Create sym links for $FILES in $HOME"
-cd $HOME
 
 for file in $FILES; do
     # check if there is already a file there
@@ -63,15 +69,6 @@ fi
 
 # link everything
 ln -s $DIR/config/nvim ~/.config/nvim
-
-# do it for coc config too
-if [ -d ".config/coc" ]; then
-    # back it up
-    mv ".config/coc" ".config/coc_old" 
-fi
-ln -s $DIR/config/coc ~/.config/coc
-echo "-----------------------------------"
-
 
 # add bin files to path
 echo "export PATH=\$PATH:$DIR/bin"

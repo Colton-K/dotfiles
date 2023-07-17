@@ -1,0 +1,3 @@
+#!/bin/bash
+
+watch -n.1 "grep \"^[c]pu MHz\" /proc/cpuinfo"

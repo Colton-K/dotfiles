@@ -30,10 +30,10 @@ Plug 'andymass/vim-matchup'
 
 " enhance vim's complete menu
 " NEEDS NODEJS SERVER - not good for student machines
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-set signcolumn=no " because I don't want coc's stupid side bar thingy
-nmap gd <Plug>(coc-definition)
-nmap gr <Plug>(coc-references)
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" set signcolumn=no " because I don't want coc's stupid side bar thingy
+" nmap gd <Plug>(coc-definition)
+" nmap gr <Plug>(coc-references)
 " nmap <leader>gd <Plug>(coc-definition)
 " nmap <leader>gr <Plug>(coc-references)
 " c-o opens last file, c-i opens next file
@@ -41,19 +41,20 @@ nmap gr <Plug>(coc-references)
 " run :CocUpdate
 " will have to install clangd
 " sudo apt-get install clangd
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" inoremap <silent><expr> <TAB>
+"       \ coc#pum#visible() ? coc#pum#next(1) :
+"       \ CheckBackspace() ? "\<Tab>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" function! CheckBackspace() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
 
 
 " commenting plugin
