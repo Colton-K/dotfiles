@@ -1,0 +1,125 @@
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: Private
+  EC2Vpc:
+    Type: "AWS::EC2::VPC"
+    Properties: 
+      CidrBlock: 10.0.0.0/16
+      Tags:
+        - Key: Name
+          Value: EC2Vpc
+  EC2SecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      VpcId: !Ref EC2Vpc
+      GroupDescription: "Security group allowing port forwards"
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 8022
+          ToPort: 8022
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 8025
+          ToPort: 8025
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 8024
+          ToPort: 8024
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: EC2SecurityGroup
+  EC2WebServer:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      # ImageId: "ami-053b0d53c279acc90" # us-east-1 ubuntu 22.04 LTS
+      # InstanceType: "t3a.nano"
+      ImageId: "ami-0006abfd85caddf82" # AL2 arm
+      InstanceType: "t4g.micro"
+      KeyName: "firstKeyPair"
+      BlockDeviceMappings:
+        - DeviceName: "/dev/xvda"
+          Ebs:
+            DeleteOnTermination: "true"
+            VolumeSize: "20"
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: "true"
+          DeviceIndex: "0"
+          GroupSet: 
+            - !Ref "EC2SecurityGroup"
+          SubnetId: !Ref EC2Subnet
+      Tags:
+        - Key: Name
+          Value: EC2WebServer
+  MyEIP:
+    Type: 'AWS::EC2::EIP'
+    Properties:
+      InstanceId: !Ref EC2WebServer
+  # WebsiteHostedZone: # can configure manually to prevent extra $.50 a month
+  #   Type: "AWS::Route53::HostedZone"
+  #   Properties:
+  #     Name: kammes.org
+  #     HostedZoneConfig:
+  #       Comment: "Hosted zone for kammes.org"
+  #     VPCs:
+  #       - VPCId: !Ref EC2Vpc
+  #         VPCRegion: us-east-1
+  # WebsiteRecordSet:
+  #   Type: "AWS::Route53::RecordSet"
+  #   Properties:
+  #     HostedZoneId: !Ref WebsiteHostedZone
+  #     Comment: test.kammes.org.
+  #     Name: test.kammes.org.
+  #     Type: A
+  #     TTL: '60'
+  #     ResourceRecords:
+  #       - !GetAtt MyEIP.PublicIp
+  EC2Subnet:
+    Type: "AWS::EC2::Subnet"
+    Properties:
+      AvailabilityZone: "us-east-1a"
+      VpcId: !Ref EC2Vpc
+      CidrBlock: "10.0.1.0/24"
+      Tags:
+        - Key: Name
+          Value: EC2Subnet
+  VPCInternetGateway:
+    Type: "AWS::EC2::InternetGateway"
+  InternetGatewayAttachment:
+    Type: "AWS::EC2::VPCGatewayAttachment"
+    Properties:
+      VpcId: !Ref EC2Vpc
+      InternetGatewayId: !Ref VPCInternetGateway
+  EC2RouteTable:
+    Type: "AWS::EC2::RouteTable"
+    Properties:
+      VpcId: !Ref EC2Vpc
+      Tags:
+        - Key: Name
+          Value: EC2RouteTable
+  SubnetRouteTableAssociation:
+    Type: "AWS::EC2::SubnetRouteTableAssociation"
+    Properties:
+      SubnetId: !Ref EC2Subnet
+      RouteTableId: !Ref EC2RouteTable
+  GatewayRoute:
+    Type: "AWS::EC2::Route"
+    DependsOn: InternetGatewayAttachment
+    Properties:
+      RouteTableId: !Ref EC2RouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref VPCInternetGateway

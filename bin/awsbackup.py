@@ -6,7 +6,7 @@ import os
 
 # check if less than 2 argments
 if len(sys.argv) < 2:
-    print("usage: backup.py <folder_name> (optional: <bucket_name>)")
+    print("usage: backup.py <item_name> (optional: <bucket_name>)")
     sys.exit(1)
 elif len(sys.argv) < 3:
     bucket_name = "myawsstorage-colton"
@@ -14,7 +14,7 @@ else:
     bucket_name = sys.argv[2]
 
 # take an input argument for the folder name
-folder_name = sys.argv[1]
+item_name = sys.argv[1]
 
 # check if valid bucket
 def check_bucket(bucket_name):
@@ -24,8 +24,6 @@ def check_bucket(bucket_name):
     except:
         print(f"Bucket name {bucket_name} is invalid")
         sys.exit(1)
-
-
 
 # upload files in folder
 def upload_folder(root, bucket_name):
@@ -40,6 +38,10 @@ def upload_folder(root, bucket_name):
 
     print(f'Done uploading files from {root}')
 
+def upload_file(file, bucket_name):
+    s3 = boto3.client('s3')
+
+    s3.upload_file(file, bucket_name, file)
 
 def download_folder(folder, bucket_name):
     s3 = boto3.client('s3')
@@ -49,11 +51,21 @@ def download_folder(folder, bucket_name):
 
     print(f'Done downloading files from {bucket_name}')
 
+def download_file(folder, file_name):
+    s3 = boto3.client('s3')
+    s3.download_file(file_name, file['Key'], file['Key'])
+
 if __name__ == '__main__':
     check_bucket(bucket_name)
 
     # if folder exists, upload it, otherwise download it
-    if not os.path.exists(folder_name):
-        download_folder(folder_name, bucket_name)
+    if not os.path.exists(item_name):
+        if os.path.isfile(item_name):
+            download_file(item_name, bucket_name)
+        else:
+            download_folder(item_name, bucket_name)
     else:
-        upload_folder(folder_name, bucket_name)
+        if os.path.isfile(item_name):
+            upload_file(item_name, bucket_name)
+        else:
+            upload_folder(item_name, bucket_name)

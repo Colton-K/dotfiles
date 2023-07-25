@@ -14,6 +14,21 @@ from rich.live import Live
 import cmd2
 from cmd2 import argparse_custom, with_argparser, Settable
 
+with open('.env') as f:
+    for line in f:
+        # Remove leading/trailing white spaces and newlines
+        line = line.strip()
+
+        # Skip empty lines and comments
+        if not line or line.startswith('#'):
+            continue
+
+        # Split the line into key-value pairs
+        key, value = line.split('=', 1)
+
+        # Set the environment variable
+        os.environ[key] = value
+
 import openai
 
 class Context:
@@ -37,7 +52,8 @@ class Config:
         with open(file, "r") as f:
             self.cfg = json.load(f)
         c = self.cfg
-        self.api_key = c.get("api_key", openai.api_key)
+        # self.api_key = c.get("api_key", openai.api_key)
+        self.api_key = os.environ["OPENAI_API_KEY"]
         self.api_base = c.get("api_base", openai.api_base)
         self.model = c.get("model", "gpt-3.5-turbo")
         self.prompt = c.get("prompt", [])
@@ -72,7 +88,7 @@ class GptCli(cmd2.Cmd):
         self.session = []
         # Init config
         self.config = Config(config)
-        openai.api_key = self.config.api_key
+        openai.api_key = os.environ.get("OPENAI_API_KEY")
         if self.config.api_base:
             openai.api_base = self.config.api_base
         if self.config.proxy:
