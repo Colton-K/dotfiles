@@ -14,7 +14,7 @@ done
 
 echo "Package manager command: $package_manager"
 
-packages="git htop"
+packages="git"
 
 ${package_manager} ${packages}
 

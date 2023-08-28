@@ -169,3 +169,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Su
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
 
 export PATH=~/.local/bin:"$PATH"
+export PATH="/home/user/.local/bin:/home/user/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/user/Documents/dotfiles/setup/../bin"
+. /home/user/Documents/dotfiles/setup/../bin/z
+export PATH="/home/user/.local/bin:/home/user/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/user/Documents/dotfiles/setup/../bin"
+. /home/user/Documents/dotfiles/setup/../bin/z
