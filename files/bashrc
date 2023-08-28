@@ -168,7 +168,4 @@ gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
 
-. /home/colton/work/dotfiles/bin/z
-
 export PATH=~/.local/bin:"$PATH"
-export PATH="$PATH:/home/user/Documents/dotfiles/bin"
