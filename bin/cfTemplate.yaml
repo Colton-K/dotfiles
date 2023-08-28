@@ -40,6 +40,14 @@ Resources:
           FromPort: 8024
           ToPort: 8024
           CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 25565
+          ToPort: 25565
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 3000
+          ToPort: 3000
+          CidrIp: 0.0.0.0/0
       Tags:
         - Key: Name
           Value: EC2SecurityGroup
@@ -49,8 +57,9 @@ Resources:
       # ImageId: "ami-053b0d53c279acc90" # us-east-1 ubuntu 22.04 LTS
       # InstanceType: "t3a.nano"
       ImageId: "ami-0006abfd85caddf82" # AL2 arm
-      InstanceType: "t4g.micro"
+      InstanceType: "t4g.nano"
       KeyName: "firstKeyPair"
+      CreditSpecification: "standard"
       BlockDeviceMappings:
         - DeviceName: "/dev/xvda"
           Ebs:
