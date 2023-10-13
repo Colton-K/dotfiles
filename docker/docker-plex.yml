@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jellyfin:
+    container_name: jellyfin
+    image: "jellyfin/jellyfin"
+    user: uid:gid
+    network_mode: 'host'
+    volumes:
+      - ./jellyfin/config:/config
+      - ./jellyfin/cache:/cache
+      - ${MOUNT_POINT}:/media
+    restart: 'unless-stopped'
