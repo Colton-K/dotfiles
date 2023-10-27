@@ -59,12 +59,13 @@ Resources:
       ImageId: "ami-0006abfd85caddf82" # AL2 arm
       InstanceType: "t4g.nano"
       KeyName: "firstKeyPair"
-      CreditSpecification: "standard"
+      # CreditSpecification: # doesn't work rn
+      #   - CPUCredits: standard
       BlockDeviceMappings:
         - DeviceName: "/dev/xvda"
           Ebs:
             DeleteOnTermination: "true"
-            VolumeSize: "20"
+            VolumeSize: "30"
       NetworkInterfaces:
         - AssociatePublicIpAddress: "true"
           DeviceIndex: "0"
@@ -82,6 +83,15 @@ Resources:
   #   Type: "AWS::Route53::HostedZone"
   #   Properties:
   #     Name: kammes.org
+  #     HostedZoneConfig:
+  #       Comment: "Hosted zone for kammes.org"
+  #     VPCs:
+  #       - VPCId: !Ref EC2Vpc
+  #         VPCRegion: us-east-1
+  # WebsiteHostedZone: # can configure manually to prevent extra $.50 a month
+  #   Type: "AWS::Route53::HostedZone"
+  #   Properties:
+  #     Name: www.kammes.org
   #     HostedZoneConfig:
   #       Comment: "Hosted zone for kammes.org"
   #     VPCs:

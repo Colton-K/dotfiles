@@ -125,8 +125,6 @@ PS1=$PS1"\n$ "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-
-
 RED="31"
 GREEN="32"
 BLUE="34"
@@ -168,8 +166,8 @@ gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
 
-export PATH=~/.local/bin:"$PATH"
 export PATH="/home/user/.local/bin:/home/user/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/user/Documents/dotfiles/setup/../bin"
+export PATH="$PATH:~/.fzf/bin"
 . /home/user/Documents/dotfiles/setup/../bin/z
-export PATH="/home/user/.local/bin:/home/user/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/user/Documents/dotfiles/setup/../bin"
-. /home/user/Documents/dotfiles/setup/../bin/z
+OPENAI_API_KEY=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
+. "$HOME/.cargo/env"

@@ -3,10 +3,78 @@ services:
   jellyfin:
     container_name: jellyfin
     image: "jellyfin/jellyfin"
-    user: uid:gid
     network_mode: 'host'
     volumes:
-      - ./jellyfin/config:/config
-      - ./jellyfin/cache:/cache
+      - ${DATA_POINT}/jellyfin/config:/config
+      - ${DATA_POINT}/jellyfin/cache:/cache
       - ${MOUNT_POINT}:/media
     restart: 'unless-stopped'
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  transmission-openvpn:
+    cap_add:
+        - NET_ADMIN
+    volumes:
+        - ${MOUNT_POINT}:/data
+        - ${DATA_POINT}/transmission:/config
+    environment:
+        - OPENVPN_PROVIDER=PIA
+        - OPENVPN_CONFIG=us_chicago
+        - OPENVPN_USERNAME=${PIA_USERNAME}
+        - OPENVPN_PASSWORD=${PIA_PASSWORD}
+        - LOCAL_NETWORK=10.10.10.0/24
+    logging:
+        driver: json-file
+        options:
+            max-size: 10m
+    ports:
+        - '9091:9091' # transmission
+        # - '9117:9117' # jackett
+        - '7878:7878' # radarr
+        - '8989:8989' # sonarr
+        - '9696:9696' # prowlarr
+    networks:
+      - media_net
+    devices:
+      - "/dev/net/tun"
+    image: haugene/transmission-openvpn
+
+  # jackett:
+  #   image: linuxserver/jackett
+  #   restart: unless-stopped
+  #   network_mode: "service:transmission-openvpn"
+  #   volumes:
+  #     - ${DATA_POINT}/jackett:/config
+  #     - ${MOUNT_POINT}/jackett/downloads:/downloads
+
+  radarr:
+    container_name: radarr
+    image: lscr.io/linuxserver/radarr:5.0.3
+    network_mode: "service:transmission-openvpn"
+    volumes:
+      - ${DATA_POINT}/radarr-config:/config
+      - ${MOUNT_POINT}/torrent-downloads:/downloads
+    restart: "unless-stopped"
+
+  sonarr:
+    image: linuxserver/sonarr:4.0.0-develop
+    container_name: sonarr
+    network_mode: "service:transmission-openvpn"
+    volumes:
+      - ${DATA_POINT}/sonarr-config:/config
+      - ${MOUNT_POINT}/torrent-downloads:/downloads
+    restart: unless-stopped
+
+  prowlarr:
+    container_name: prowlarr
+    image: linuxserver/prowlarr:1.8.6
+    network_mode: service:transmission-openvpn
+    volumes:
+      - ${DATA_POINT}/prowlarr-config:/config
+    restart: unless-stopped
+
+
+networks:
+  media_net:
+    driver: bridge

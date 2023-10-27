@@ -1,5 +1,5 @@
 xterm*faceName: Monospace
-xterm*faceSize: 10
+xterm*faceSize: 12
 xterm*faceAntialias:true
 xterm*selectToClipboard: true
 
