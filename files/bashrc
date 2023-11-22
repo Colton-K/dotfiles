@@ -154,9 +154,6 @@ export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 # export LESS_TERMCAP_us=${BOLDGREEN} # bottom bar color
 # export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 
-alias crc="ssh ckammes@crcfe01.crc.nd.edu"
-alias crcfs="mkdir -p remotefs && sshfs ckammes@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/c/ckammes/ remotefs "
-
 # make using tmux nice
 alias tmux="env TERM=xterm-256color tmux"
 
@@ -169,5 +166,5 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt>
 export PATH="/home/user/.local/bin:/home/user/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/user/Documents/dotfiles/setup/../bin"
 export PATH="$PATH:~/.fzf/bin"
 . /home/user/Documents/dotfiles/setup/../bin/z
-OPENAI_API_KEY=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
 . "$HOME/.cargo/env"
+export $(cat ~/.env | xargs)
