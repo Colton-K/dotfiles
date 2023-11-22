@@ -8,6 +8,7 @@ services:
       - ${DATA_POINT}/jellyfin/config:/config
       - ${DATA_POINT}/jellyfin/cache:/cache
       - ${MOUNT_POINT}/torrent-downloads:/media
+      - ${MOUNT_POINT}/library:/library
     restart: 'unless-stopped'
     extra_hosts:
       - "host.docker.internal:host-gateway"
@@ -55,8 +56,11 @@ services:
     network_mode: "service:transmission-openvpn"
     volumes:
       - ${DATA_POINT}/radarr-config:/config
-      - ${MOUNT_POINT}/torrent-downloads:/downloads
+      - ${MOUNT_POINT}/library:/downloads
       - ${MOUNT_POINT}/torrent-downloads:/data/completed
+    environment:
+      - PUID=${PUID} # default user id, defined in .env
+      - PGID=${PGID} # default group id, defined in .env
     restart: "unless-stopped"
 
   sonarr:
@@ -65,8 +69,11 @@ services:
     network_mode: "service:transmission-openvpn"
     volumes:
       - ${DATA_POINT}/sonarr-config:/config
-      - ${MOUNT_POINT}/torrent-downloads:/downloads
+      - ${MOUNT_POINT}/library:/downloads
       - ${MOUNT_POINT}/torrent-downloads:/data/completed
+    environment:
+      - PUID=${PUID} # default user id, defined in .env
+      - PGID=${PGID} # default group id, defined in .env
     restart: unless-stopped
 
   prowlarr:
