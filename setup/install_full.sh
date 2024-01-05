@@ -1,17 +1,12 @@
-declare -A osInfo;
-osInfo[/etc/debian_version]="apt-get install -y"
-osInfo[/etc/alpine-release]="apk --update add"
-osInfo[/etc/centos-release]="yum install -y"
-osInfo[/etc/fedora-release]="dnf install -y"
-osInfo[/etc/amazon-linux-release]="dnf install -y"
+package_manager="apt-get install -y "
+which apt > /dev/null 2>&1
+if test $? -gt 0; then
+    package_manager="dnf install -y "
+fi
 
-for f in ${!osInfo[@]}
-do
-	if [[ -f $f ]];then
-		package_manager=${osInfo[$f]}
-	fi
-done
+echo "Package manager command: $package_manager"
 
+packages="git htop"
 echo "Package manager command: $package_manager"
 
 packages="git htop pip ripgrep nodejs gcc firefox z"
