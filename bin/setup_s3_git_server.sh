@@ -11,10 +11,6 @@ sudo make install
 
 cd ~
 mkdir git
-echo "myawsstorage-colton /home/ec2-user/git fuse.s3fs _netdev,allow_other,defaults,passwd_file=/etc/passwd-s3fs,,uid=1000,gid=1000 0 0" | sudo tee -a /etc/fstab
-
-echo "--------------------------------------"
-echo "make sure you created /etc/passwd-s3fs"
-echo "--------------------------------------"
+echo "myawsstorage-colton /home/ec2-user/git fuse.s3fs _netdev,allow_other,passwd_file=/etc/passwd-s3fs,default_acl=public-read,uid=1001,gid=65534 0 0" | sudo tee -a /etc/fstab
 
 sudo mount -a
