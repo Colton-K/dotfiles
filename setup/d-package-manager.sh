@@ -8,4 +8,7 @@ echo "Package manager command: $package_manager"
 
 packages="git htop pip ripgrep nodejs gcc firefox tmux"
 
-${package_manager} ${packages}
+for VAR in $packages
+do
+    ${package_manager} $VAR
+done
