@@ -14,3 +14,16 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+autoload -U colors && colors
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+precmd() { print -rP "$fg[magenta]%~%{$reset_color%}%  $(parse_git_branch)" }
+PS1="%{$fg[green]%}%n>%{$reset_color%}%  "
+
+bindkey "\e\e[D" backward-word
+bindkey "\e\e[C" forward-word
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

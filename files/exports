@@ -1,0 +1,29 @@
+export BRAZIL_CLI_BIN=$HOME/.toolbox/bin
+export PATH=$HOME/bin:$BRAZIL_CLI_BIN:$PATH
+
+export $(cat ~/.env | xargs)
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+
+RED="31"
+GREEN="32"
+BLUE="34"
+BOLDBLUE="\e[1;${BLUE}m"
+BOLDGREEN="\e[1;${GREEN}m"
+UNDERLINEDGREEN="\e[4;${GREEN}m"
+ITALICRED="\e[3;${RED}m"
+ENDCOLOR="\e[0m"
+
+# make man pages look nice!
+export LESS_TERMCAP_mb=$'\e[1;32m' # main highlighted color
+export LESS_TERMCAP_md=$'\e[1;32m' # ^ 34 for blue
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m' # variable name color
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[0;4;32m' # bottom bar color
+export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
+
+export PATH="/home/user/.cargo/bin:/home/user/.local/bin:/home/user/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/colton/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/colton/work/dotfiles/bin:/home/user/Documents/dotfiles/bin:/home/user/Documents/dotfiles/setup/../bin:~/.fzf/bin:/home/user/.fzf/bin:/home/user/Documents/dotfiles/setup/../bin:/home/user/Documents/dotfiles/setup/../bin:/home/user/Documents/dotfiles/setup/../bin:/home/user/Documents/dotfiles/setup/../bin"

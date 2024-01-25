@@ -2,8 +2,14 @@
 	email = ckammes@nd.edu
 	name = ckammes@nd.edu
 
-[tool]
-    diff = vimdiff
+[diff]
+    tool = nvimdiff
+
+[difftool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE
+
+[difftool]
+    prompt = false
 
 [alias]
         pr = pull --rebase
@@ -19,6 +25,9 @@
         cloner = clone --recursive
         ca = !git add -A && git commit -av
 
+[commit]
+    template = ~/.commit_template
+
 [apply]
     whitespace = fix
 [pull]
@@ -32,3 +41,10 @@
 	smudge = git-lfs smudge -- %f
 [diff]
 	tool = nvim -d
+
+[amazon]
+    append-cr-url = true
+    pull-request-by-default = true
+
+[core]
+    editor = nvim
