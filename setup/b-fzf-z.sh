@@ -9,5 +9,5 @@ if test $? -gt 0; then
 fi
 
 CWD=$(pwd)
-Z_DIR="$CWD/../bin/z.sh"
+Z_DIR="$CWD/../bin/z"
 echo ". $Z_DIR" >> ~/.exports
