@@ -6,7 +6,7 @@ fi
 
 echo "Package manager command: $package_manager"
 
-packages="git htop pip ripgrep nodejs gcc firefox tmux"
+packages="git htop pip ripgrep nodejs gcc firefox tmux bat"
 
 for VAR in $packages
 do

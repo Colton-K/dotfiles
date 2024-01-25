@@ -1,3 +1,5 @@
+mkdir ~/.config # make if not already made
+
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage

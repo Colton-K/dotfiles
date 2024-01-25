@@ -40,4 +40,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias auth="kinit -f && mwinit -o"
 alias vi="nvim "
-alias cat="bat "
+# alias cat="bat "
