@@ -21,10 +21,30 @@ parse_git_branch() {
 }
 
 precmd() { print -rP "$fg[magenta]%~%{$reset_color%}%  $(parse_git_branch)" }
-PS1="%{$fg[green]%}%n>%{$reset_color%}%  "
+PS1="%{$fg[green]%}%n@%m>%{$reset_color%}%  "
 
 bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [ -f ~/.alias_file ]; then
+    source ~/.alias_file
+fi
+
+if [ -f ~/.exports ]; then
+    source ~/.exports
+fi
+
+. ~/.nvm/nvm.sh
+
+# if you wish to use IMDS set AWS_EC2_METADATA_DISABLED=false
+
+export AWS_EC2_METADATA_DISABLED=true
+
+
+source ~/.fzf.zsh

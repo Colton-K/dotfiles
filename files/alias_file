@@ -41,3 +41,26 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias auth="kinit -f && mwinit -o"
 alias vi="nvim "
 # alias cat="bat "
+
+alias bb='brazil-build'
+alias bbr='brazil-recursive-cmd brazil-build'
+alias bbra='brazil-recursive-cmd brazil-build apollo-pkg'
+alias brcag="brazil-recursive-cmd --allPackages 'echo \">>>>>>>>>>>>>>>>>>>>>>>>\" \$PWD && git status'"
+alias bbc='bb clean; bb'
+alias bbcr='bb clean && bb release'
+alias bbcrt='bb clean && bb release | tee /tmp/bb-release.txt'
+alias bbcart='bb clean && bb apollo-pkg && bb release | tee /tmp/bb-release.txt'
+alias bba='bb clean; bb && bb apollo-pkg'
+alias bbq='bb clean && bb apollo-pkg'
+alias bws='brazil workspace'
+alias bvs='bws --use -vs'
+alias bws--use--package='kinit && bws --use --package'
+alias bws--attachenvironment--alias='bws --attachenvironment --alias'
+alias bws--remove--package='bws --remove --package'
+alias bws--create--name='bws --create --name'
+alias bws--delete--root='bws --delete --root'
+alias bws--sync='kinit && workplace-root; bws --sync'
+alias bhws='brazil help workspace'
+alias bsps='brazil setup platform-support'
+
+alias creds='ada credentials update --account=$AWS_ID --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once'
