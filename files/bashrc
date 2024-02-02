@@ -77,7 +77,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 if [ -f ~/.alias_file ]; then
     source ~/.alias_file
@@ -91,3 +90,5 @@ fi
     gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
     gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
     gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  "['<Alt><Shift>Tab', '<Super><Shift>Tab']"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -11,9 +11,11 @@ case $current_window_style in
     $default_window_style|'default')
         # Change to the alternate window style.
         tmux set window-style $alternate_window_style
+        export COLOR_MODE="light"
         ;;
     *)
         # Change back to the default window style.
         tmux set window-style $default_window_style
+        export COLOR_MODE="dark"
         ;;
 esac

@@ -145,4 +145,11 @@ return {
     {
         "ryanoasis/vim-devicons"
     },
+    {
+        "rktjmp/lush.nvim"
+    },
+    {
+        "mcchrish/zenbones.nvim",
+        requires = "rktjmp/lush.nvim"
+    }
 }
