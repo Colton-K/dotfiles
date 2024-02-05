@@ -3,21 +3,25 @@
 # Toggle the current window (all panes) between light and dark themes.
 set -e
 
-default_window_style='fg=#d0cfcc,bg=#171421'
-alternate_window_style='fg=#171421,bg=#ffffff'
+default_window_style='fg=#FFFFFF,bg=#000000'
+alternate_window_style='fg=#303030,bg=#EDEBED'
 current_window_style=$(tmux show -Av window-style)
 
 export COLOR_MODE="dark"
 
 case $current_window_style in
     $default_window_style|'default')
+        echo "Setting light theme..."
         # Change to the alternate window style.
         tmux set window-style $alternate_window_style
         export COLOR_MODE="light"
+        tmux source ~/.tmux.light
         ;;
     *)
+        echo "Setting dark theme..."
         # Change back to the default window style.
         tmux set window-style $default_window_style
         export COLOR_MODE="dark"
+        tmux source ~/.tmux.dark
         ;;
 esac

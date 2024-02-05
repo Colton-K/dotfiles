@@ -3,6 +3,8 @@ export PATH=$HOME/bin:$BRAZIL_CLI_BIN:$PATH
 
 export $(cat ~/.env | xargs)
 
+COLOR_MODE="dark"
+
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -32,3 +34,7 @@ export PATH="/home/ckammes/bin:/home/ckammes/usr/bin:/usr/kerberos/bin:/apollo/e
 . /home/ckammes/dotfiles/setup/../bin/z
 . /home/ckammes/dotfiles/setup/../bin/z
 . /home/ckammes/dotfiles/setup/../bin/z
+export PATH="/home/ckammes/bin:/home/ckammes/usr/bin:/usr/kerberos/bin:/apollo/env/envImprovement/bin:/home/ckammes/.toolbox/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/apollo/bin:/apollo/sbin:/apollo/env/ApolloCommandLine/bin:/home/ckammes/dotfiles/setup/../bin"
+export PATH="/home/ckammes/bin:/home/ckammes/usr/bin:/usr/kerberos/bin:/apollo/env/envImprovement/bin:/home/ckammes/.toolbox/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/apollo/bin:/apollo/sbin:/apollo/env/ApolloCommandLine/bin:/home/ckammes/dotfiles/setup/../bin"
+export PATH="/home/ckammes/bin:/home/ckammes/usr/bin:/usr/kerberos/bin:/apollo/env/envImprovement/bin:/home/ckammes/.toolbox/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/apollo/bin:/apollo/sbin:/apollo/env/ApolloCommandLine/bin:/home/ckammes/dotfiles/setup/../bin:/home/ckammes/.fzf/bin:/local/home/ckammes/dotfiles/setup/../bin"
+export PATH="/home/ckammes/bin:/home/ckammes/usr/bin:/usr/kerberos/bin:/apollo/env/envImprovement/bin:/home/ckammes/.toolbox/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/apollo/bin:/apollo/sbin:/apollo/env/ApolloCommandLine/bin:/home/ckammes/dotfiles/setup/../bin:/home/ckammes/.fzf/bin:/local/home/ckammes/dotfiles/setup/../bin"
