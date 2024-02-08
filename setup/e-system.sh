@@ -9,3 +9,10 @@ if [ $? -eq 0 ]; then
     gsettings set org.gnome.desktop.wm.keybindings switch-windows \"['<Alt>Tab', '<Super>Tab']\"
     gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward  \"['<Alt><Shift>Tab', '<Super><Shift>Tab']\""
 fi
+
+echo "installing pip"
+curl -O https://bootstrap.pypa.io/get-pip.py
+python get-pip.py --user
+
+echo "installing boto3"
+/home/$(whoami)/.local/bin/pip install boto3 --user

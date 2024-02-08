@@ -20,7 +20,6 @@ require('lazy').setup({
   require('plugins.list')
 }, {})
 
-vim.cmd.colorscheme 'gruvbox'
 require('plugins.telescope')
 require('plugins.treesitter')
 require('plugins.lsp')

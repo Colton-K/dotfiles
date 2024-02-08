@@ -15,6 +15,7 @@ case $current_window_style in
         # Change to the alternate window style.
         tmux set window-style $alternate_window_style
         export COLOR_MODE="light"
+        echo "light" > ~/.config/nvim/color_mode
         tmux source ~/.tmux.light
         ;;
     *)
@@ -22,6 +23,7 @@ case $current_window_style in
         # Change back to the default window style.
         tmux set window-style $default_window_style
         export COLOR_MODE="dark"
+        echo "dark" > ~/.config/nvim/color_mode
         tmux source ~/.tmux.dark
         ;;
 esac
