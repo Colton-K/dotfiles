@@ -1,4 +1,4 @@
-set -g window-style 'fg=#FFFFFF,bg=#000000'
+set -g window-style 'fg=#D9D9D9,bg=#000000'
 set -g status-style fg='#B279A7',bg='#B4BDC3'
 
 set -g window-status-current-style fg='#B279A7',bg='#B4BDC3',bold
