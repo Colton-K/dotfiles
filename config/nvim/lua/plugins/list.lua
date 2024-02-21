@@ -51,6 +51,7 @@ return {
                 vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
                 vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
                 vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
+                vim.keymap.set('n', '<leader>m', '<Cmd>Gitsigns change_base mainline<CR>', { buffer = bufnr, desc = '[M] to change_base mainline' })
             end,
         },
     },
