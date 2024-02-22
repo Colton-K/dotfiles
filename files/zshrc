@@ -20,7 +20,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-precmd() { print -rP "$fg[magenta]%~%{$reset_color%}%  $(parse_git_branch)" }
+precmd() { print -rP "[%t] $fg[magenta]%~%{$reset_color%}%  $(parse_git_branch)" }
 PS1="%{$fg[green]%}%n@%m>%{$reset_color%}%  "
 
 bindkey "\e\e[D" backward-word
