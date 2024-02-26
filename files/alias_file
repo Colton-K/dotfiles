@@ -40,6 +40,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias auth="kinit -f && mwinit -o"
 alias vi="nvim "
+
+alias vidiff="git diff --name-status mainline -- | sed -nE 's/M+([^\s-]+)/\1/p' | xargs -o nvim"
 # alias cat="bat "
 
 alias bb='brazil-build'
