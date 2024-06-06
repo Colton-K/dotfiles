@@ -5,3 +5,4 @@ docker/test/*
 config/coc/*
 bin/config.json
 color_mode
+scratch
