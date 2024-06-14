@@ -51,6 +51,7 @@ return {
                 vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
                 vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
                 vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
+                vim.keymap.set('n', '<leader>m', '<Cmd>Gitsigns change_base mainline<CR>', { buffer = bufnr, desc = '[M] to change_base mainline' })
             end,
         },
     },
@@ -132,7 +133,16 @@ return {
           "nvim-lua/plenary.nvim",
           "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
           "MunifTanjim/nui.nvim",
-        }
+        },
+        config = function ()
+            require("neo-tree").setup({
+              follow_current_file = {
+                enabled = true, -- This will find and focus the file in the active buffer every time
+                --               -- the current file is changed while the tree is open.
+                leave_dirs_open = true, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+              },
+            })
+        end
     },
 
     {
@@ -151,5 +161,11 @@ return {
     {
         "mcchrish/zenbones.nvim",
         requires = "rktjmp/lush.nvim"
+    },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
     }
 }

@@ -1,12 +1,12 @@
 # aliases go here!
-alias test_alias="echo \"Alias is working!!!\""
+alias test_alias='echo \"Alias is working!!!\"'
 
 # make using tmux nice
-alias tmux="env TERM=xterm-256color tmux"
+alias tmux='env TERM=xterm-256color tmux'
 
 alias ls='ls --color=auto'
 
-alias gs="git status"
+alias gs='git status'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -14,38 +14,36 @@ alias egrep='egrep --color=auto'
 
 alias schoolssh='ssh -X ckammes@student02.cse.nd.edu'
 
-alias gpu="sudo system76-power graphics"
-alias profile="system76-power profile"
-alias shutdown="sudo shutdown -h now"
-alias n="nautilus ."
-alias ne="nautilus . && exit"
-alias wgetall="wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off "
+alias gpu='sudo system76-power graphics'
+alias profile='system76-power profile'
+alias shutdown='sudo shutdown -h now'
+alias n='nautilus .'
+alias ne='nautilus . && exit'
+alias wgetall='wget --level=inf --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off '
 
-alias vi="nvim"
-alias c="xclip -sel c"
-alias v="xclip -o -sel c"
+alias vi='nvim'
+alias c='xclip -sel c'
+alias v='xclip -o -sel c'
 
 
 # for mplab to control pic microcontroller
-alias mp="sudo mplab_ide"
+alias mp='sudo mplab_ide'
 #
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias auth='kinit -f && mwinit -o && creds'
+alias vi='nvim '
 
-alias auth="kinit -f && mwinit -o"
-alias vi="nvim "
+alias vidiff='git diff --name-status mainline -- | sed -nE "s/M+([^\s-]+)/\1/p" | xargs -o nvim'
 # alias cat="bat "
 
 alias bb='brazil-build'
 alias bbr='brazil-recursive-cmd brazil-build'
 alias bbra='brazil-recursive-cmd brazil-build apollo-pkg'
-alias brcag="brazil-recursive-cmd --allPackages 'echo \">>>>>>>>>>>>>>>>>>>>>>>>\" \$PWD && git status'"
+alias brcag='brazil-recursive-cmd --allPackages "echo \">>>>>>>>>>>>>>>>>>>>>>>>>\" \$PWD && git status"'
 alias bbc='bb clean; bb'
 alias bbcr='bb clean && bb release'
 alias bbcrt='bb clean && bb release | tee /tmp/bb-release.txt'
@@ -62,5 +60,6 @@ alias bws--delete--root='bws --delete --root'
 alias bws--sync='kinit && workplace-root; bws --sync'
 alias bhws='brazil help workspace'
 alias bsps='brazil setup platform-support'
+alias bbhs='creds && bb cdk deploy --hotswap '
 
-alias creds='ada credentials update --account=$AWS_ID --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once'
+alias creds='ada credentials update --account="$AWS_ID" --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once'

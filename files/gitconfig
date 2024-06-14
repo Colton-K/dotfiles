@@ -1,6 +1,6 @@
 [user]
-	email = ckammes@nd.edu
-	name = ckammes@nd.edu
+	email = ckammes@amazon.com
+	name = Colton Kammes
 
 [diff]
     tool = nvimdiff
@@ -39,8 +39,6 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[diff]
-	tool = nvim -d
 
 [amazon]
     append-cr-url = true
