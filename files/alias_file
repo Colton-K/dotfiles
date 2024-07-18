@@ -63,3 +63,8 @@ alias bsps='brazil setup platform-support'
 alias bbhs='creds && bb cdk deploy --hotswap '
 
 alias creds='ada credentials update --account="$AWS_ID" --provider=conduit --role=IibsAdminAccess-DO-NOT-DELETE --once'
+
+function fwp {
+    cd $(find ${HOME}/workplace/* -maxdepth 2 -mindepth 2 -type d -path '**/src/*' -printf '%p\n' | fzf)
+    ls -l
+}
