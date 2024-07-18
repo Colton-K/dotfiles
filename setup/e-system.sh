@@ -13,6 +13,10 @@ fi
 echo "installing pip"
 curl -O https://bootstrap.pypa.io/get-pip.py
 python get-pip.py --user
+rm get-pip.py
 
 echo "installing boto3"
 /home/$(whoami)/.local/bin/pip install boto3 --user
+
+/home/$(whoami)/.local/bin/pip install thefuck --user
+

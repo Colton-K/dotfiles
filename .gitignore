@@ -6,3 +6,4 @@ config/coc/*
 bin/config.json
 color_mode
 scratch
+get-pip.py
