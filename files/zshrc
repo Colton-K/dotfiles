@@ -15,6 +15,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 autoload -U colors && colors
+autoload -Uz compinit && compinit
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -45,6 +46,5 @@ fi
 # if you wish to use IMDS set AWS_EC2_METADATA_DISABLED=false
 
 export AWS_EC2_METADATA_DISABLED=true
-
 
 source ~/.fzf.zsh
