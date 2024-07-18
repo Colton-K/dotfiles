@@ -47,6 +47,15 @@ return {
             topdelete = { text = '‾' },
             changedelete = { text = '~' },
             },
+            current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
+            current_line_blame_opts = {
+                virt_text = true,
+                virt_text_pos = 'eol',
+                delay = 0,
+                ignore_whitespace = false,
+                virt_text_priority = 100,
+            },
+            current_line_blame_formatter = '<author>, <author_time:%R> - <summary>',
             on_attach = function(bufnr)
                 vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
                 vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
@@ -142,6 +151,7 @@ return {
                 leave_dirs_open = true, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
               },
             })
+            vim.keymap.set("n", "FF", ":Neotree reveal<CR>", {})
         end
     },
 

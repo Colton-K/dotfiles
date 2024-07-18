@@ -1,4 +1,4 @@
-PLUGIN_FOLDER="$HOME/Documents"
+PLUGIN_FOLDER="$HOME/Documents/plugins"
 
 PLUGIN_LIST="tmux-plugins/tmux-continuum tmux-plugins/tmux-resurrect tmux-plugins/tmux-cowboy ofirgall/tmux-window-name"
 
