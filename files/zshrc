@@ -51,3 +51,5 @@ source ~/.fzf.zsh
 
 eval $(thefuck --alias f)
 
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
