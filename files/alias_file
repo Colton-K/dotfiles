@@ -37,7 +37,8 @@ alias l='ls -CF'
 alias auth='kinit -f && mwinit -o && creds'
 alias vi='nvim '
 
-alias vidiff='git diff --name-status mainline -- | sed -nE "s/M+([^\s-]+)/\1/p" | xargs -o nvim'
+alias vidiffall='git diff --name-status mainline -- | sed -nE "s/M+([^\s-]+)/\1/p" | xargs -o nvim'
+alias vidiff='vi $(git diff --name-status mainline -- | sed -nE "s/M+([^\s-]+)/\1/p" | fzf)'
 # alias cat="bat "
 
 alias bb='brazil-build'
@@ -67,4 +68,8 @@ alias creds='ada credentials update --account="$AWS_ID" --provider=conduit --rol
 function fwp {
     cd $(find ${HOME}/workplace/* -maxdepth 2 -mindepth 2 -type d -path '**/src/*' -printf '%p\n' | fzf)
     ls -l
+}
+
+function z {
+    cd $(find . -type d -maxdepth 5 -print | fzf)
 }
