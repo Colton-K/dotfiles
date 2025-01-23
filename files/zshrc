@@ -49,3 +49,5 @@ export AWS_EC2_METADATA_DISABLED=true
 
 source ~/.fzf.zsh
 
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
