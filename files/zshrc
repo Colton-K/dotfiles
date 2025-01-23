@@ -49,5 +49,3 @@ export AWS_EC2_METADATA_DISABLED=true
 
 source ~/.fzf.zsh
 
-eval $(thefuck --alias f)
-
