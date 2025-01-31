@@ -73,3 +73,6 @@ function fwp {
 function z {
     cd $(find . -type d -maxdepth 5 -print | fzf)
 }
+
+alias crall='cr $(ls -d */ | xargs -I {} echo "-i {}")'
+alias gitpullall='ls | xargs -P10 -I{} git -C {} pull --rebase'
