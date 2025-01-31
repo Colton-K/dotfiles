@@ -29,4 +29,6 @@ end
 
 vim.cmd([[
   command! -range LinkToCodeBrowser lua link_to_code_browser(<line1>, <line2>)
+  command! -range CodeBrowser lua link_to_code_browser(<line1>, <line2>)
+
 ]])
